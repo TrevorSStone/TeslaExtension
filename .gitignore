@@ -1,0 +1,17 @@
+.DS_Store
+packages
+.project
+pubspec.lock
+.idea
+node_modules
+build
+*.iml
+*.ipr
+*.iws
+*.dart.js
+*.dart.precompiled.js
+*.js_
+*.js.deps
+*.js.map
+images/com*
+gotools/images

@@ -1,0 +1,13 @@
+<div>
+	<header>
+	<span class="header-text">
+	Climate
+</span>
+<div id="climate-button" class="button" 
+	ng-click="ctrl.toggleHVAC()"
+	ng-class="ctrl.climateButtonClass()"
+	ng-if="ctrl.showClimateButton()">{{ctrl.climateButtonText()}}</div>
+</header>
+<tesla-climate  vehicle-id="ctrl.vehicleID()" ng-if="ctrl.showVehicle()">
+</tesla-climate>
+</div>

@@ -1,0 +1,10 @@
+name: tesla_extension
+version: 0.0.1
+dependencies:
+  angular: any
+  browser: any
+  js: any
+  google_maps: ">=2.0.0 <3.0.0"
+
+dev_dependencies:
+  unittest: any

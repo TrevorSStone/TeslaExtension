@@ -1,0 +1,272 @@
+@font-face {
+  font-family: 'montserratbold';
+  src: url(../css/montserrat-bold-webfont.svg#montserratbold) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: 'montserratregular';
+  src: url(montserrat-regular-webfont.svg#montserratregular) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+html {
+  width: 400px;
+  height: 600px;
+  position: relative
+}
+body {
+  width: 400px;
+  height: 600px;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'montserratregular', Fallback, sans-serif
+}
+.tesla-logo {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  margin: 0;
+  background: -webkit-linear-gradient(270deg, #e31937, #9f1126);
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: .75s;
+  transition-property: opacity;
+  transition-duration: .75s
+}
+.tesla-logo.fade {
+  opacity: 0
+}
+.login-form {
+  padding-top: 2em
+}
+.tesla-background {
+  background: -webkit-linear-gradient(270deg, #e31937, #9f1126)
+}
+.main {
+  background: #000
+}
+header {
+  background: -webkit-linear-gradient(top, #7d7e7d -25%, #0e0e0e 57%);
+  background: linear-gradient(to bottom, #7d7e7d -25%, #0e0e0e 57%);
+  height: 5rem;
+  color: #fff;
+  font-size: 1.25em;
+  line-height: 5rem
+}
+.header-text {
+  margin-left: 1em;
+  float: left
+}
+tesla-car {
+  font-size: 12px
+}
+[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important
+}
+.button {
+  text-transform: uppercase;
+  border-top: 1px solid #858585;
+  background: #333336;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5c5c5c), to(#333336));
+  background: -webkit-linear-gradient(top, #5c5c5c, #333336);
+  padding: 14.5px 29px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'montserratbold', Fallback, sans-serif;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 12em;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box
+}
+.button:hover {
+  border-top-color: #3b3b3b;
+  background: -webkit-gradient(linear, left top, left bottom, to(#333336), from(#5c5c5c));
+  background: -webkit-linear-gradient(top, #333336, #5c5c5c);
+  color: #fff
+}
+.button:active {
+  border-top-color: #575757;
+  background: #575757
+}
+.button.disabled {
+  background: #222;
+  cursor: default;
+  border-top: 1px solid #555;
+  color: #444
+}
+.button.disabled:hover {
+  background: #222;
+  border-top: 1px solid #555
+}
+.button.disabled:active {
+  background: #222;
+  border-top: 1px solid #555
+}
+#vent-roof-button {
+  margin-left: auto;
+  margin-right: auto;
+  top: 6em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1
+}
+#button-container {
+  position: absolute;
+  top: 22em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 24.38em
+}
+#button-container .button {
+  float: left;
+  margin: .5em
+}
+tesla-car {
+  position: absolute;
+  top: 8em;
+  width: 100%
+}
+tesla-battery {
+  position: absolute;
+  top: 19em;
+  width: 100%;
+  left: 0
+}
+tesla-charge-controls {
+  position: relative;
+  top: 4.5em
+}
+header .button {
+  float: right;
+  font-size: .75em;
+  line-height: 3rem;
+  width: 11em;
+  padding: 0;
+  margin-top: 1em;
+  margin-right: 1.5em
+}
+tesla-charge-rate {
+  position: absolute;
+  top: 27em;
+  left: 0;
+  width: 100%
+}
+.padlock {
+  display: none;
+  height: 3.2em;
+  width: 3em
+}
+.padlock.locked {
+  display: block;
+  background: url(../images/lock_lock.png) no-repeat;
+  background-size: 100% auto
+}
+.padlock.unlocked {
+  display: block;
+  background: url(../images/lock_unlock.png) no-repeat;
+  background-size: 100% auto
+}
+#homelock {
+  position: absolute;
+  bottom: 7em;
+  right: 1em
+}
+#controlslock {
+  position: absolute;
+  bottom: 41%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto
+}
+.status {
+  position: absolute;
+  top: 4.6em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 99;
+  white-space: pre;
+  font-weight: 400;
+  font-family: 'montserratregular';
+  line-height: 1.2em
+}
+.status:first-line {
+  font-size: 1.3em;
+  font-weight: 700;
+  font-family: 'montserratbold'
+}
+#address {
+  color: #fff;
+  position: absolute;
+  bottom: 8em;
+  font-size: 1em;
+  width: 75%;
+  white-space: pre;
+  left: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+#loading-screen div {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  box-shadow: 0 10px white, 0 -10px #fff;
+  margin-left: -10px;
+  -webkit-animation: rotate2 8s infinite linear;
+}
+#loading-screen span {
+  font-size: 1.5em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 55%;
+  color: #fff
+}
+#loading-screen div:nth-child(2) {
+  box-shadow: 0 -20px white, 0 20px #fff;
+  -webkit-animation: rotate 7.5s infinite linear;
+}
+#loading-screen div:nth-child(3) {
+  box-shadow: 0 30px white, 0 -30px #fff;
+  -webkit-animation: rotate2 7s infinite linear;
+}
+#loading-screen div:nth-child(4) {
+  box-shadow: 0 -40px white, 0 40px #fff;
+  -webkit-animation: rotate 6.5s infinite linear;
+}
+#loading-screen div:nth-child(5) {
+  box-shadow: 0 50px white, 0 -50px #fff;
+  -webkit-animation: rotate2 6s infinite linear;
+}
+@-webkit-keyframes rotate {
+100% {
+  -webkit-transform: rotate(360deg)
+}
+}
+@-webkit-keyframes rotate2 {
+100% {
+  -webkit-transform: rotate(-360deg)
+}
+}

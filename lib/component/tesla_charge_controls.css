@@ -1,0 +1,55 @@
+.button {
+  border-top: 1px solid #858585;
+  background: #333336;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5c5c5c), to(#333336));
+  background: -webkit-linear-gradient(top, #5c5c5c, #333336);
+  padding: 1em;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+  color: white;
+  font-size: 15px;
+  font-family: 'montserratbold', Fallback, sans-serif;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 29%;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  list-style-type: none;
+  float: left;
+}
+.button:hover {
+  border-top-color: #3b3b3b;
+  background: -webkit-gradient(linear, left top, left bottom, to(#333336), from(#5c5c5c));
+  background: -webkit-linear-gradient(top, #333336, #5c5c5c);
+  color: #ffffff;
+}
+.button:active {
+  border-top-color: #575757;
+  background: #575757;
+}
+.button.disabled {
+  background: #222222;
+  cursor: default;
+  border-top: 1px solid #555;
+  color: #444;
+}
+.button.disabled:hover {
+  background: #222222;
+  border-top: 1px solid #555;
+}
+.button.disabled:active {
+  background: #222222;
+  border-top: 1px solid #555;
+}
+li {
+  margin: .5em;
+}
+header {
+  color: white;
+  text-align: center;
+  font-size: 1em;
+}

@@ -1,0 +1,14 @@
+<header>
+	<span class="header-text">
+	VIN {{ctrl.currentVin()}}
+</span>
+<div id="logout-button" class="button" 
+	ng-click="ctrl.logout()">Logout</div>
+</header>
+<div class="status">{{ctrl.homeStatus()}}</div>
+<tesla-car class=”ng-cloak” car-color="ctrl.currentVehicleColor()" vehicle-id="ctrl.vehicleID()" roof-type="ctrl.currentRoofType()" wheel-type="ctrl.currentVehicleRims()" charge-door-open="ctrl.isChargeDoorOpen()" plugged-in="ctrl.isPluggedIn()" ng-if="ctrl.showVehicle()">
+</tesla-car>
+<tesla-battery vehicle-id="ctrl.vehicleID()" ng-if="ctrl.showVehicle()">
+</tesla-battery>
+<div id="address" title="{{ctrl.currentAddress}}">{{ctrl.currentAddress}}</div>
+<div id="homelock" class="padlock" ng-class="ctrl.padlockClass()"></div>

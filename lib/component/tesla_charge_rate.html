@@ -1,0 +1,6 @@
+<div id="container" ng-if="ctrl.showRate()">
+	<header>Charging Rate</header>
+	<div id="message">
+	<img src="../images/charge_bolt.png"/> {{ctrl.chargeRate()}}<span class="sub">{{ctrl.guiChargeUnits()}}</span> {{ctrl.voltage()}}<span class="sub">V</span> {{ctrl.current()}}<span class="full sub">/{{ctrl.maxCurrent()}}</span> <span class="sub">A</span>
+	</div>
+</div>

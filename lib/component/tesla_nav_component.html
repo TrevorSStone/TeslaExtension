@@ -1,0 +1,14 @@
+<div id="nav-bg">
+</div>
+<nav>
+<ul id="selectors">
+		<li 
+		ng-repeat="button in ctrl.buttons" 
+		ng-class="ctrl.navClass(button)" 
+		ng-click="ctrl.handleClick(button)">
+			<a href="#/{{button}}">
+			{{button}}
+			</a>
+		</li>
+</ul>
+</nav>

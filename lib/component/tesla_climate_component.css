@@ -1,0 +1,165 @@
+#garage {
+	width: 100%;
+}
+#car {
+	font-size: 9.8px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 6.7em;
+	height: 22.75em;
+	width: 100%;
+	background: url('../images/climate/climate_car.png') no-repeat;
+	background-size: 104% auto;
+	margin-left: -2%;
+}
+#climate {
+	display: none;
+	width: 59%;
+	position: absolute;
+	height: 8em;
+	top: 10em;
+	left: 19%;
+}
+#climate.cool {
+	display: block;
+	background: url('../images/climate/climate_car_cold.png') no-repeat;
+	background-size: 100% auto;
+}
+#climate.hot {
+	display: block;
+	background: url('../images/climate/climate_car_hot.png') no-repeat;
+	background-size: 100% auto;
+}
+#control-background {
+	background: url('../images/climate/curve_metal.png') no-repeat;
+	background-size: 100% auto;
+	height: 12.5em;
+	width: 100%;
+	text-align: center;
+}
+#control-container {
+	height: 9em;
+	width: 7em;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 3em;
+}
+#control-container.c {
+	width: 9em;
+}
+#up-arrow {
+	height: 50%;
+	width: 100%;
+	background: url('../images/climate/climate_temp_control_up.png') no-repeat;
+	background-size: 100% auto;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.c #up-arrow {
+	background: url('../images/climate/climate_temp_control_up_c.png') no-repeat;
+	background-size: 100% auto;
+}
+#down-arrow {
+	height: 50%;
+	width: 100%;
+	background: url('../images/climate/climate_temp_control_down.png') no-repeat;
+	background-size: 100% auto;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.c #down-arrow {
+	background: url('../images/climate/climate_temp_control_down_c.png') no-repeat;
+	background-size: 100% auto;
+}
+#down-arrow:active {
+	background: url('../images/climate/climate_temp_control_down_hit.png') no-repeat;
+	background-size: 100% auto;
+}
+#up-arrow:active {
+	background: url('../images/climate/climate_temp_control_up_hit.png') no-repeat;
+	background-size: 100% auto;
+}
+.c #down-arrow:active {
+	background: url('../images/climate/climate_temp_control_down_hit_c.png') no-repeat;
+	background-size: 100% auto;
+}
+.c #up-arrow:active {
+	background: url('../images/climate/climate_temp_control_up_hit_c.png') no-repeat;
+	background-size: 100% auto;
+}
+#control-display {
+	position: absolute;
+	top: 50%;
+	height: 38%;
+	width: 75%;
+	background: url('../images/climate/climate_temp_control_well.png') no-repeat;
+	background-size: 100% auto;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	color: white;
+	font-size: 2.75em;
+	line-height: 1.1em;
+}
+.c #control-display {
+	background: url('../images/climate/climate_temp_control_well_c.png') no-repeat;
+	background-size: 100% auto;
+	font-size: 2.5em;
+}
+#control-display.text {
+	line-height: 1.4em;
+}
+.degree {
+	font-size: .75em;
+}
+header {
+	color: white;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 1.15em;
+}
+header div {
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.15em;
+}
+#outside-temp {
+	position: absolute;
+	top: 1.5em;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#front-window {
+	width: 20%;
+	position: absolute;
+	height: 5em;
+	top: 25%;
+	left: 27%;
+}
+#front-window.hot {
+	background: url('../images/climate/climate_car_front_hot.png') no-repeat;
+	background-size: 100% auto;
+}
+#front-window.cool {
+	background: url('../images/climate/climate_car_front_cold.png') no-repeat;
+	background-size: 100% auto;
+}
+#rear-window {
+	width: 20%;
+	position: absolute;
+	height: 3.2em;
+	top: 25%;
+	left: 69%;
+	background: url('../images/climate/climate_car_rear_hot.png') no-repeat;
+	background-size: 100% auto;
+}

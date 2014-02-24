@@ -1,0 +1,41 @@
+<div id="battery-container">
+<!-- 	<div id="battery-meter">
+		<div id="battery">
+			<div id="battery-value" ng-class="battery.batteryLevel()"></div>
+			<div id="battery-charge-limit" ng-class="battery.batteryChargeLimit()"></div>
+			<div id="battery-ticks"></div>
+		</div>
+	</div> -->
+	<div class="container">
+	    <div id="batteryBody">
+	        <div id="indicator" ng-class="battery.batteryLevel()">
+	        </div>
+	        <div id="indicator-ticks" class="width10"></div>
+	        <div id="indicator-ticks" class="width20"></div>
+	        <div id="indicator-ticks" class="width30"></div>
+	        <div id="indicator-ticks" class="width40"></div>
+	        <div id="indicator-ticks" class="width50"></div>
+	        <div id="indicator-ticks" class="width60"></div>
+	        <div id="indicator-ticks" class="width70"></div>
+	        <div id="indicator-ticks" class="width80"></div>
+	        <div id="indicator-ticks" class="width90"></div>
+	        <div id="indicator-limit" ng-class="battery.batteryChargeLimit()"></div>
+	    </div>
+	    <div class="batteryEnd">
+	        <div>
+	         
+	        </div>
+	    </div>
+	</div>
+	
+	<div id="battery-text">
+		<span id="range">{{battery.currentRange()}}</span>
+		<span id="range-unit">
+		{{battery.distanceUnit()}}
+		</span>
+		<div id="range-type">{{battery.rangeType()}}</div>
+	</div>
+	<div class="imgcontainer" ng-if="battery.showMaxRange()">
+	MAX RANGE
+	</div>
+</div>

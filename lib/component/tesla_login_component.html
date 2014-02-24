@@ -1,0 +1,14 @@
+<div id="tesla-login">
+    <div class="login-logo">
+        TESLA
+    </div>
+
+    <fieldset>
+        <legend>SIGN IN TO MY TESLA</legend>
+        <input type="text" name="email" id="email" ng-model="ctrl.email" placeholder="Email" ng-keyup='ctrl.checkKey($event)' />
+        <input type="password" name="password" id="password" ng-model="ctrl.password" placeholder="Password" ng-keyup='ctrl.checkKey($event)' />
+    </fieldset>
+    <div id="error" ng-if="ctrl.loginFailed">
+		Login Failed.<br>Make Sure the Email and Password are Correct.
+    </div>
+</div>

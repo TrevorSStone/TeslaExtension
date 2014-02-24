@@ -1,0 +1,425 @@
+#battery-container {
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px black;
+	font-size: 13px;
+	background-size: 100%;
+	height: 15em;
+	position: relative;
+}
+img {
+	height: 1.2em;
+}
+.imgcontainer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 1.2em;
+	text-align: center;
+}
+#battery-meter {
+	background: url('../images/battery/battery_empty.png') no-repeat -0.375em -0.5em;
+	background-size: 100%;
+	height: 15em;
+	width: 30.5em;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+}
+#battery {
+	height: 3.7em;
+	width: 26.6875em;
+	position: absolute;
+	top: 2.8em;
+	right: 2.125em;
+}
+#battery-ticks {
+	background: url('../images/battery/battery_highlight.png') no-repeat, url('../images/battery/battery_ticks_overlay.png') no-repeat;
+	height: 100%;
+	width: 100%;
+	background-size: 100% auto;
+	position: absolute;
+}
+#range {
+	font-family: 'montserratbold', Fallback, sans-serif;
+	font-size: 5em;
+}
+#range-unit {
+	margin-left: -7px;
+	font-size: 1.7em;
+}
+#battery-value {
+	background: #008000;
+	height: 3.7em;
+	-webkit-mask: url('../images/battery/battery_filled.png') top left/ 26.6875em 100%;
+	position: absolute;
+	border-right: white .2em solid;
+}
+#battery-charge-limit {
+	height: 3.7em;
+	-webkit-mask: url('../images/battery/battery_filled.png') top left/ 26.6875em 100%;
+	position: absolute;
+	border-right: yellow .2em solid;
+}
+#battery-text {
+	width: 100%;
+	position: absolute;
+}
+#range-type {
+	margin-top: 1.3em;
+	font-size: 1.3em;
+}
+.none {
+	display: none;
+}
+.width0 {
+	width: 0%;
+}
+.width1 {
+	width: 1%;
+}
+.width2 {
+	width: 2%;
+}
+.width3 {
+	width: 3%;
+}
+.width4 {
+	width: 4%;
+}
+.width5 {
+	width: 5%;
+}
+.width6 {
+	width: 6%;
+}
+.width7 {
+	width: 7%;
+}
+.width8 {
+	width: 8%;
+}
+.width9 {
+	width: 9%;
+}
+.width10 {
+	width: 10%;
+}
+.width11 {
+	width: 11%;
+}
+.width12 {
+	width: 12%;
+}
+.width13 {
+	width: 13%;
+}
+.width14 {
+	width: 14%;
+}
+.width15 {
+	width: 15%;
+}
+.width16 {
+	width: 16%;
+}
+.width17 {
+	width: 17%;
+}
+.width18 {
+	width: 18%;
+}
+.width19 {
+	width: 19%;
+}
+.width20 {
+	width: 20%;
+}
+.width21 {
+	width: 21%;
+}
+.width22 {
+	width: 22%;
+}
+.width23 {
+	width: 23%;
+}
+.width24 {
+	width: 24%;
+}
+.width25 {
+	width: 25%;
+}
+.width26 {
+	width: 26%;
+}
+.width27 {
+	width: 27%;
+}
+.width28 {
+	width: 28%;
+}
+.width29 {
+	width: 29%;
+}
+.width30 {
+	width: 30%;
+}
+.width31 {
+	width: 31%;
+}
+.width32 {
+	width: 32%;
+}
+.width33 {
+	width: 33%;
+}
+.width34 {
+	width: 34%;
+}
+.width35 {
+	width: 35%;
+}
+.width36 {
+	width: 36%;
+}
+.width37 {
+	width: 37%;
+}
+.width38 {
+	width: 38%;
+}
+.width39 {
+	width: 39%;
+}
+.width40 {
+	width: 40%;
+}
+.width41 {
+	width: 41%;
+}
+.width42 {
+	width: 42%;
+}
+.width43 {
+	width: 43%;
+}
+.width44 {
+	width: 44%;
+}
+.width45 {
+	width: 45%;
+}
+.width46 {
+	width: 46%;
+}
+.width47 {
+	width: 47%;
+}
+.width48 {
+	width: 48%;
+}
+.width49 {
+	width: 49%;
+}
+.width50 {
+	width: 50%;
+}
+.width51 {
+	width: 51%;
+}
+.width52 {
+	width: 52%;
+}
+.width53 {
+	width: 53%;
+}
+.width54 {
+	width: 54%;
+}
+.width55 {
+	width: 55%;
+}
+.width56 {
+	width: 56%;
+}
+.width57 {
+	width: 57%;
+}
+.width58 {
+	width: 58%;
+}
+.width59 {
+	width: 59%;
+}
+.width60 {
+	width: 60%;
+}
+.width61 {
+	width: 61%;
+}
+.width62 {
+	width: 62%;
+}
+.width63 {
+	width: 63%;
+}
+.width64 {
+	width: 64%;
+}
+.width65 {
+	width: 65%;
+}
+.width66 {
+	width: 66%;
+}
+.width67 {
+	width: 67%;
+}
+.width68 {
+	width: 68%;
+}
+.width69 {
+	width: 69%;
+}
+.width70 {
+	width: 70%;
+}
+.width71 {
+	width: 71%;
+}
+.width72 {
+	width: 72%;
+}
+.width73 {
+	width: 73%;
+}
+.width74 {
+	width: 74%;
+}
+.width75 {
+	width: 75%;
+}
+.width76 {
+	width: 76%;
+}
+.width77 {
+	width: 77%;
+}
+.width78 {
+	width: 78%;
+}
+.width79 {
+	width: 79%;
+}
+.width80 {
+	width: 80%;
+}
+.width81 {
+	width: 81%;
+}
+.width82 {
+	width: 82%;
+}
+.width83 {
+	width: 83%;
+}
+.width84 {
+	width: 84%;
+}
+.width85 {
+	width: 85%;
+}
+.width86 {
+	width: 86%;
+}
+.width87 {
+	width: 87%;
+}
+.width88 {
+	width: 88%;
+}
+.width89 {
+	width: 89%;
+}
+.width90 {
+	width: 90%;
+}
+.width91 {
+	width: 91%;
+}
+.width92 {
+	width: 92%;
+}
+.width93 {
+	width: 93%;
+}
+.width94 {
+	width: 94%;
+}
+.width95 {
+	width: 95%;
+}
+.width96 {
+	width: 96%;
+}
+.width97 {
+	width: 97%;
+}
+.width98 {
+	width: 98%;
+}
+.width99 {
+	width: 99%;
+}
+.width100 {
+	width: 100%;
+	border-right: none !important;
+}
+#batteryBody {
+	display: inline-block;
+	width: 75%;
+	height: 100%;
+	border: 10px #CCC solid;
+	position: relative;
+}
+.container {
+	position: absolute;
+	width: 100%;
+	height: 3em;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.batteryEnd {
+	display: inline-block;
+	height: 95px;
+	width: 15px;
+}
+.batteryEnd div {
+	width: 15px;
+	height: 35px;
+	margin-top: 45px;
+	margin-left: 5px;
+	background-color: #CCC;
+}
+#indicator {
+	height: 100%;
+	background: #008000;
+	float:left;
+}
+#indicator-limit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border-right: yellow .2em solid;
+}
+#indicator-ticks {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 10%;
+	border-right: #CCC .2em solid;
+}

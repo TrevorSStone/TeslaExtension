@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <title>Tesla Model S Control</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+</head>
+<body tesla-login class="tesla-background">
+<!--   <header>
+    VIN P18336
+  </header>
+  <button id="test">Test</button>
+ -->
+ 
+<div class="tesla-logo" ng-if='!ctrl.hideLogo' ng-class='ctrl.logoClass()'>
+</div>
+<div class="login-form">
+	<tesla-login-form  ng-if='ctrl.showLogin'>
+	</tesla-login-form>
+</div>
+  <script type="application/dart" src="login.dart"></script>
+	<script src="local/dart.js"></script>
+</body>
+
+</html>
+

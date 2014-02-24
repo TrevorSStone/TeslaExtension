@@ -1,0 +1,25 @@
+<div id="garage">
+	<header>
+		<div id="inside-temp" ng-if="climate.showInteriorTemp()">Interior Temperature: {{climate.interiorTemp()}}<sup>°</sup>{{climate.temperatureUnits()}}</div>
+		<div id="outside-temp" ng-if="climate.showExteriorTemp()">Exterior Temperature: {{climate.exteriorTemp()}}<sup>°</sup>{{climate.temperatureUnits()}}</div>
+	</header>
+	<div id="car">
+	</div>
+	<div id="climate" ng-class="climate.climateClass()">
+	</div>
+	<div id="front-window" ng-if="climate.frontDefrost()" ng-class="climate.climateClass()">
+	</div>
+	<div id="rear-window" ng-if="climate.rearHeater()">
+	</dic>
+</div>
+<div id="control-background">
+	<div id="control-container" ng-class="climate.buttonClass()">
+		<div id="up-arrow" ng-click="climate.setTemp(climate.diffAmount())">
+			
+		</div>
+		<div id="control-display" ng-class="climate.driverTempClass()">
+			{{climate.driverTemp()}}<span class="degree" ng-if='climate.driverTemp() != "" && climate.driverTemp() != "LO" && climate.driverTemp() != "HI"'><sup>°</sup></span>
+		</div>
+		<div id="down-arrow" ng-click="climate.setTemp(-climate.diffAmount())"></div>
+	</div>
+</div>

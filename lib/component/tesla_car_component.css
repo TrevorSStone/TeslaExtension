@@ -1,0 +1,568 @@
+#garage {
+	background: url('../images/car/bg_car.png') no-repeat;
+	background-size: 34em !important;
+	background-position: center;
+	width: 100%;
+	height: 25em;
+}
+#car {
+	width: 29.7em;
+	height: 13em;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 3.7em;
+}
+#frontrim {
+	position: absolute;
+	width: 3.6em;
+	height: 4em;
+	bottom: 0em;
+	left: 2.97em;
+	display: none;
+}
+#frontrim.grey {
+	background: url('../images/car/rims_dark_front.png') no-repeat;
+	background-size: 100% auto;
+	display: block;
+}
+#backrim {
+	position: absolute;
+	width: 3.6em;
+	height: 3.98em;
+	bottom: 0em;
+	right: 4.6em;
+	display: none;
+}
+#backrim.grey {
+	background: url('../images/car/rims_dark_rear.png') no-repeat;
+	background-size: 100% auto;
+	display: block;
+}
+#charge-port {
+	height: 0.75em;
+	width: 0.5625em;
+	position: absolute;
+	background-size: 100% !important;
+	background: url('../images/car/charge_port_closed.png') no-repeat;
+	top: 7.375em;
+	left: 26.875em;
+}
+#charge-port.open {
+	height: 0.625em;
+	width: 0.5625em;
+	background: url('../images/car/charge_port_open.png') no-repeat;
+	top: 7.375em;
+	left: 27.475em;
+}
+#charge-light {
+	height: 0.75em;
+	width: 0.5625em;
+	position: absolute;
+	display: none;
+	top: 7.375em;
+	left: 26.875em;
+}
+#charge-light.open, #charge-light.pluggedin {
+	background-size: 100% !important;
+	background: url('../images/car/charge_port_on.png') no-repeat;
+	display: block;
+}
+#charge-cable {
+	height: 8.75em;
+	width: 7.3em;
+	position: absolute;
+	display: none;
+	top: 7.575em;
+	left: 24.25em;
+}
+#charge-cable.pluggedin {
+	background-size: auto 100% !important;
+	background: url('../images/car/charge_cable_long.png') no-repeat;
+	display: block;
+}
+#roof {
+	height: 3.4375em;
+	width: 10.0625em;
+	position: absolute;
+	background-size: 100% !important;
+	top: 1.0625em;
+	left: 12.5625em;
+}
+#frunk {
+	position: absolute;
+	background-size: 100% !important;
+}
+#frunk.open {
+	top: -0.9375em;
+	left: 0.3125em;
+	height: 8.4375em;
+	width: 7.9375em;
+}
+#frunk {
+	top: 2.875em;
+	left: 0.125em;
+	height: 4.9375em;
+	width: 8.875em;
+}
+#leftfront {
+	position: absolute;
+	background-size: 100% !important;
+}
+#leftfront.open {
+	top: 6.5em;
+	left: 7.1875em;
+	height: 9.25em;
+	width: 5.5625em;
+}
+#leftfront {
+	top: 4.3125em;
+	left: 8.5em;
+	height: 6.75em;
+	width: 7.8125em;
+}
+#leftrear {
+	position: absolute;
+	background-size: 100% !important;
+}
+#leftrear.open {
+	top: 5em;
+	left: 13.8125em;
+	height: 9.4375em;
+	width: 5.875em;
+}
+#leftrear {
+	top: 4.3em;
+	left: 15.5625em;
+	height: 6.8125em;
+	width: 7.125em;
+}
+#trunk {
+	position: absolute;
+	background-size: 100% !important;
+}
+#trunk.open {
+	top: -1.3125em;
+	left: 22.375em;
+	height: 6.5625em;
+	width: 7.375em;
+}
+#trunk {
+	top: 1.5625em;
+	left: 21.75em;
+	height: 6.625em;
+	width: 7.0625em;
+}
+#body {
+	position: absolute;
+	background-size: 100% !important;
+	height: 11.4375em;
+	width: 29.125em;
+	top: 1em;
+}
+#rightfront {
+	position: absolute;
+	background-size: 100% !important;
+}
+#rightfront.open {
+	left: 141px;
+	top: -29px;
+	width: 3.5625em;
+	height: 7.25em;
+}
+#rightfront {
+	background: url('../images/car/right_front_closed.png') no-repeat;
+	left: 10.0625em;
+	top: 1.4375em;
+	width: 6.625em;
+	height: 4.9375em;
+}
+#rightrear {
+	position: absolute;
+	background-size: 100% !important;
+}
+#rightrear.open {
+	height: 6.125em;
+	width: 2.8125em;
+	top: -0.625em;
+	left: 16.4375em;
+}
+#rightrear {
+	background: url('../images/car/right_rear_closed.png') no-repeat;
+	left: 15.5625em;
+	top: 1.4375em;
+	width: 5.9375em;
+	height: 4.75em;
+}
+.black #roof {
+	background: url('../images/car/roof_black.png') no-repeat;
+}
+.black #frunk {
+	background: url('../images/car/frunk_closed_black.png') no-repeat;
+}
+.black #frunk.open {
+	background: url('../images/car/frunk_open_black.png') no-repeat;
+}
+.black #leftfront.open {
+	background: url('../images/car/left_front_open_black.png') no-repeat;
+}
+.black #leftfront {
+	background: url('../images/car/left_front_closed_black.png') no-repeat;
+}
+.black #leftrear {
+	background: url('../images/car/left_rear_closed_black.png') no-repeat;
+}
+.black #leftrear.open {
+	background: url('../images/car/left_rear_open_black.png') no-repeat;
+}
+.black #trunk {
+	background: url('../images/car/trunk_closed_black.png') no-repeat;
+}
+.black #trunk.open {
+	background: url('../images/car/trunk_open_black.png') no-repeat;
+}
+.black #body {
+	background: url('../images/car/body_black.png') no-repeat;
+}
+.black #rightfront.open {
+	background: url('../images/car/right_front_open_black.png') no-repeat;
+}
+.black #rightrear.open {
+	background: url('../images/car/right_rear_open_black.png') no-repeat;
+}
+.blue #roof {
+	background: url('../images/car/roof_blue.png') no-repeat;
+}
+.blue #frunk {
+	background: url('../images/car/frunk_closed_blue.png') no-repeat;
+}
+.blue #frunk.open {
+	background: url('../images/car/frunk_open_blue.png') no-repeat;
+}
+.blue #leftfront.open {
+	background: url('../images/car/left_front_open_blue.png') no-repeat;
+}
+.blue #leftfront {
+	background: url('../images/car/left_front_closed_blue.png') no-repeat;
+}
+.blue #leftrear {
+	background: url('../images/car/left_rear_closed_blue.png') no-repeat;
+}
+.blue #leftrear.open {
+	background: url('../images/car/left_rear_open_blue.png') no-repeat;
+}
+.blue #trunk {
+	background: url('../images/car/trunk_closed_blue.png') no-repeat;
+}
+.blue #trunk.open {
+	background: url('../images/car/trunk_open_blue.png') no-repeat;
+}
+.blue #body {
+	background: url('../images/car/body_blue.png') no-repeat;
+}
+.blue #rightfront.open {
+	background: url('../images/car/right_front_open_blue.png') no-repeat;
+}
+.blue #rightrear.open {
+	background: url('../images/car/right_rear_open_blue.png') no-repeat;
+}
+.brown #roof {
+	background: url('../images/car/roof_brown.png') no-repeat;
+}
+.brown #frunk {
+	background: url('../images/car/frunk_closed_brown.png') no-repeat;
+}
+.brown #frunk.open {
+	background: url('../images/car/frunk_open_brown.png') no-repeat;
+}
+.brown #leftfront.open {
+	background: url('../images/car/left_front_open_brown.png') no-repeat;
+}
+.brown #leftfront {
+	background: url('../images/car/left_front_closed_brown.png') no-repeat;
+}
+.brown #leftrear {
+	background: url('../images/car/left_rear_closed_brown.png') no-repeat;
+}
+.brown #leftrear.open {
+	background: url('../images/car/left_rear_open_brown.png') no-repeat;
+}
+.brown #trunk {
+	background: url('../images/car/trunk_closed_brown.png') no-repeat;
+}
+.brown #trunk.open {
+	background: url('../images/car/trunk_open_brown.png') no-repeat;
+}
+.brown #body {
+	background: url('../images/car/body_brown.png') no-repeat;
+}
+.brown #rightfront.open {
+	background: url('../images/car/right_front_open_brown.png') no-repeat;
+}
+.brown #rightrear.open {
+	background: url('../images/car/right_rear_open_brown.png') no-repeat;
+}
+.gray #roof {
+	background: url('../images/car/roof_gray.png') no-repeat;
+}
+.gray #frunk {
+	background: url('../images/car/frunk_closed_gray.png') no-repeat;
+}
+.gray #frunk.open {
+	background: url('../images/car/frunk_open_gray.png') no-repeat;
+}
+.gray #leftfront.open {
+	background: url('../images/car/left_front_open_gray.png') no-repeat;
+}
+.gray #leftfront {
+	background: url('../images/car/left_front_closed_gray.png') no-repeat;
+}
+.gray #leftrear {
+	background: url('../images/car/left_rear_closed_gray.png') no-repeat;
+}
+.gray #leftrear.open {
+	background: url('../images/car/left_rear_open_gray.png') no-repeat;
+}
+.gray #trunk {
+	background: url('../images/car/trunk_closed_gray.png') no-repeat;
+}
+.gray #trunk.open {
+	background: url('../images/car/trunk_open_gray.png') no-repeat;
+}
+.gray #body {
+	background: url('../images/car/body_gray.png') no-repeat;
+}
+.gray #rightfront.open {
+	background: url('../images/car/right_front_open_gray.png') no-repeat;
+}
+.gray #rightrear.open {
+	background: url('../images/car/right_rear_open_gray.png') no-repeat;
+}
+.green #roof {
+	background: url('../images/car/roof_green.png') no-repeat;
+}
+.green #frunk {
+	background: url('../images/car/frunk_closed_green.png') no-repeat;
+}
+.green #frunk.open {
+	background: url('../images/car/frunk_open_green.png') no-repeat;
+}
+.green #leftfront.open {
+	background: url('../images/car/left_front_open_green.png') no-repeat;
+}
+.green #leftfront {
+	background: url('../images/car/left_front_closed_green.png') no-repeat;
+}
+.green #leftrear {
+	background: url('../images/car/left_rear_closed_green.png') no-repeat;
+}
+.green #leftrear.open {
+	background: url('../images/car/left_rear_open_green.png') no-repeat;
+}
+.green #trunk {
+	background: url('../images/car/trunk_closed_green.png') no-repeat;
+}
+.green #trunk.open {
+	background: url('../images/car/trunk_open_green.png') no-repeat;
+}
+.green #body {
+	background: url('../images/car/body_green.png') no-repeat;
+}
+.green #rightfront.open {
+	background: url('../images/car/right_front_open_green.png') no-repeat;
+}
+.green #rightrear.open {
+	background: url('../images/car/right_rear_open_green.png') no-repeat;
+}
+.newred #roof {
+	background: url('../images/car/roof_newred.png') no-repeat;
+}
+.newred #frunk {
+	background: url('../images/car/frunk_closed_newred.png') no-repeat;
+}
+.newred #frunk.open {
+	background: url('../images/car/frunk_open_newred.png') no-repeat;
+}
+.newred #leftfront.open {
+	background: url('../images/car/left_front_open_newred.png') no-repeat;
+}
+.newred #leftfront {
+	background: url('../images/car/left_front_closed_newred.png') no-repeat;
+}
+.newred #leftrear {
+	background: url('../images/car/left_rear_closed_newred.png') no-repeat;
+}
+.newred #leftrear.open {
+	background: url('../images/car/left_rear_open_newred.png') no-repeat;
+}
+.newred #trunk {
+	background: url('../images/car/trunk_closed_newred.png') no-repeat;
+}
+.newred #trunk.open {
+	background: url('../images/car/trunk_open_newred.png') no-repeat;
+}
+.newred #body {
+	background: url('../images/car/body_newred.png') no-repeat;
+}
+.newred #rightfront.open {
+	background: url('../images/car/right_front_open_newred.png') no-repeat;
+}
+.newred #rightrear.open {
+	background: url('../images/car/right_rear_open_newred.png') no-repeat;
+}
+.pearlwhite #roof {
+	background: url('../images/car/roof_pearlwhite.png') no-repeat;
+}
+.pearlwhite #frunk {
+	background: url('../images/car/frunk_closed_pearlwhite.png') no-repeat;
+}
+.pearlwhite #frunk.open {
+	background: url('../images/car/frunk_open_pearlwhite.png') no-repeat;
+}
+.pearlwhite #leftfront.open {
+	background: url('../images/car/left_front_open_pearlwhite.png') no-repeat;
+}
+.pearlwhite #leftfront {
+	background: url('../images/car/left_front_closed_pearlwhite.png') no-repeat;
+}
+.pearlwhite #leftrear {
+	background: url('../images/car/left_rear_closed_pearlwhite.png') no-repeat;
+}
+.pearlwhite #leftrear.open {
+	background: url('../images/car/left_rear_open_pearlwhite.png') no-repeat;
+}
+.pearlwhite #trunk {
+	background: url('../images/car/trunk_closed_pearlwhite.png') no-repeat;
+}
+.pearlwhite #trunk.open {
+	background: url('../images/car/trunk_open_pearlwhite.png') no-repeat;
+}
+.pearlwhite #body {
+	background: url('../images/car/body_pearlwhite.png') no-repeat;
+}
+.pearlwhite #rightfront.open {
+	background: url('../images/car/right_front_open_pearlwhite.png') no-repeat;
+}
+.pearlwhite #rightrear.open {
+	background: url('../images/car/right_rear_open_pearlwhite.png') no-repeat;
+}
+.red #roof {
+	background: url('../images/car/roof_red.png') no-repeat;
+}
+.red #frunk {
+	background: url('../images/car/frunk_closed_red.png') no-repeat;
+}
+.red #frunk.open {
+	background: url('../images/car/frunk_open_red.png') no-repeat;
+}
+.red #leftfront.open {
+	background: url('../images/car/left_front_open_red.png') no-repeat;
+}
+.red #leftfront {
+	background: url('../images/car/left_front_closed_red.png') no-repeat;
+}
+.red #leftrear {
+	background: url('../images/car/left_rear_closed_red.png') no-repeat;
+}
+.red #leftrear.open {
+	background: url('../images/car/left_rear_open_red.png') no-repeat;
+}
+.red #trunk {
+	background: url('../images/car/trunk_closed_red.png') no-repeat;
+}
+.red #trunk.open {
+	background: url('../images/car/trunk_open_red.png') no-repeat;
+}
+.red #body {
+	background: url('../images/car/body_red.png') no-repeat;
+}
+.red #rightfront.open {
+	background: url('../images/car/right_front_open_red.png') no-repeat;
+}
+.red #rightrear.open {
+	background: url('../images/car/right_rear_open_red.png') no-repeat;
+}
+.silver #roof {
+	background: url('../images/car/roof_silver.png') no-repeat;
+}
+.silver #frunk {
+	background: url('../images/car/frunk_closed_silver.png') no-repeat;
+}
+.silver #frunk.open {
+	background: url('../images/car/frunk_open_silver.png') no-repeat;
+}
+.silver #leftfront.open {
+	background: url('../images/car/left_front_open_silver.png') no-repeat;
+}
+.silver #leftfront {
+	background: url('../images/car/left_front_closed_silver.png') no-repeat;
+}
+.silver #leftrear {
+	background: url('../images/car/left_rear_closed_silver.png') no-repeat;
+}
+.silver #leftrear.open {
+	background: url('../images/car/left_rear_open_silver.png') no-repeat;
+}
+.silver #trunk {
+	background: url('../images/car/trunk_closed_silver.png') no-repeat;
+}
+.silver #trunk.open {
+	background: url('../images/car/trunk_open_silver.png') no-repeat;
+}
+.silver #body {
+	background: url('../images/car/body_silver.png') no-repeat;
+}
+.silver #rightfront.open {
+	background: url('../images/car/right_front_open_silver.png') no-repeat;
+}
+.silver #rightrear.open {
+	background: url('../images/car/right_rear_open_silver.png') no-repeat;
+}
+.white #roof {
+	background: url('../images/car/roof_white.png') no-repeat;
+}
+.white #frunk {
+	background: url('../images/car/frunk_closed_white.png') no-repeat;
+}
+.white #frunk.open {
+	background: url('../images/car/frunk_open_white.png') no-repeat;
+}
+.white #leftfront.open {
+	background: url('../images/car/left_front_open_white.png') no-repeat;
+}
+.white #leftfront {
+	background: url('../images/car/left_front_closed_white.png') no-repeat;
+}
+.white #leftrear {
+	background: url('../images/car/left_rear_closed_white.png') no-repeat;
+}
+.white #leftrear.open {
+	background: url('../images/car/left_rear_open_white.png') no-repeat;
+}
+.white #trunk {
+	background: url('../images/car/trunk_closed_white.png') no-repeat;
+}
+.white #trunk.open {
+	background: url('../images/car/trunk_open_white.png') no-repeat;
+}
+.white #body {
+	background: url('../images/car/body_white.png') no-repeat;
+}
+.white #rightfront.open {
+	background: url('../images/car/right_front_open_white.png') no-repeat;
+}
+.white #rightrear.open {
+	background: url('../images/car/right_rear_open_white.png') no-repeat;
+}
+#roof.black {
+	background: url('../images/car/roof_black.png') no-repeat;
+}
+#roof.sunroof {
+	background: url('../images/car/sunroof_closed.png') no-repeat;
+}
+#roof.sunroof.open, #roof.sunroof.comfort {
+	background: url('../images/car/sunroof_open.png') no-repeat;
+}
+#roof.sunroof.vent {
+	background: url('../images/car/sunroof_vent.png') no-repeat;
+}

@@ -1,0 +1,16 @@
+<header>
+	<span class="header-text">
+		Charge
+	</span>
+	<div id="charge-button" class="button" 
+	ng-click="ctrl.toggleCharging()"
+	ng-class="ctrl.chargeButtonClass()"
+	ng-if="ctrl.showChargingButton()">{{ctrl.chargingButtonText()}}</div>
+</header>
+<div class="status">{{ctrl.chargeStatus()}}</div>
+<tesla-charge-controls vehicle-id="ctrl.vehicleID()" ng-if="ctrl.showVehicle()">
+</tesla-charge-controls>
+<tesla-battery  vehicle-id="ctrl.vehicleID()" ng-if="ctrl.showVehicle()" show-limit="true">
+</tesla-battery>
+<tesla-charge-rate vehicle-id="ctrl.vehicleID()">
+</tesla-charge-rate>

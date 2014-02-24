@@ -1,0 +1,10 @@
+<div id="controls">
+	<header>Set Charge Limit</header>
+	<li 
+		ng-repeat="chargelevel in ctrl.getChargeLevels()" 
+		class="button" 
+		ng-class="ctrl.chargeButtonClass()"
+		ng-click="ctrl.setChargeLevel(chargelevel)">
+			{{chargelevel}}
+		</li>
+</div>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <title>Tesla Model S Control</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body tesla class="main">
+	<ng-view>
+</ng-view>
+<div id="loading-screen" ng-if="ctrl.showLoading()" ng-cloak>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<span>Connecting To Car</span>
+</div>
+<tesla-nav>
+</tesla-nav>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKNbfoE8b-8XnaYTrFX6ZU-1zuGAqigvw&sensor=true"></script>
+  	<script type="application/dart" src="main.dart"></script>
+  	<script src="local/dart.js"></script>
+	<script src="local/interop.js"></script>
+</body>
+</html>

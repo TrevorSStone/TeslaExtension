@@ -1,0 +1,84 @@
+.home {
+  background: url('../images/navicons/nav_home_off.png') no-repeat;
+}
+.home.selected, .home:hover {
+  background: url('../images/navicons/nav_home_on.png') no-repeat;
+}
+.controls {
+  background: url('../images/navicons/nav_con_off.png') no-repeat;
+}
+.controls.selected, .controls:hover {
+  background: url('../images/navicons/nav_con_on.png') no-repeat;
+}
+.charge {
+  background: url('../images/navicons/nav_char_off.png') no-repeat;
+}
+.charge.selected, .charge:hover {
+  background: url('../images/navicons/nav_char_on.png') no-repeat;
+}
+.climate {
+  background: url('../images/navicons/nav_clim_off.png') no-repeat;
+}
+.climate.selected, .climate:hover {
+  background: url('../images/navicons/nav_clim_on.png') no-repeat;
+}
+.location {
+  background: url('../images/navicons/nav_loc_off.png') no-repeat;
+}
+.location.selected, .location:hover {
+  background: url('../images/navicons/nav_loc_on.png') no-repeat;
+}
+nav {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  height: 8em;
+  width: 100%;
+  /* background-image: url('../images/bg_nav_curve.png');
+  background-position: 0 2em;
+  background-size: 100% auto;
+   */
+}
+#selectors {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* background-image: url('../images/bg_nav.png');
+  background-size: 100% auto;
+   */
+  background: -webkit-linear-gradient(top, #222 0%, #0e0e0e 57%); /* Chrome10+, Safari5.1+ */
+  background: linear-gradient(to bottom, #222 0%, #0e0e0e 57%); /* W3C */
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+#selectors li {
+  list-style-type: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 6.1em;
+  color: #828282;
+  line-height: 7.5em;
+  background-size: 100%;
+}
+#selectors li.selected, #selectors li:hover {
+  color: white;
+}
+a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+#nav-bg {
+  width: 100%;
+  height: 4em;
+  position: absolute;
+  bottom: 1.2em;
+  background: #222;
+  border-radius: 1000px / 50px;
+  box-shadow: 0px 0px 50px #bbb;
+}
