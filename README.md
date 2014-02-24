@@ -1,6 +1,10 @@
 #Tesla Model S Control
 
 **I need your help. Unfortunately, I was told by a Tesla employee that I was not allowed to use their images in my application. I replaced all images with ugly placeholder art. If you, or someone you know would be able to help bring some beauty back to the extension please contact me and check out the reddit thread: XXXXX and the Tesla motor club thread: XXXXXX**
+![Old Version](/screenshots/old/Tesla Model S Home.png?raw=true)
+vs 
+![New Version](/screenshots/new/Tesla Model S Home.png?raw=true)
+
 
 This application is for owners of the Tesla Model S.
 
