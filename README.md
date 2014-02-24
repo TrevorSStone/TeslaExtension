@@ -1,4 +1,5 @@
 #Tesla Model S Control
+[Link to Extension](https://chrome.google.com/webstore/detail/tesla-model-s-control/beoeghbnbaphdhjgeclajnniaghnfofk)
 
 **I need your help. Unfortunately, I was told by a Tesla employee that I was not allowed to use their images in my application. I replaced all images with ugly placeholder art. If you, or someone you know would be able to help bring some beauty back to the extension please contact me and check out the reddit thread: XXXXX and the Tesla motor club thread: XXXXXX**
 ![Old Version](/screenshots/old/Tesla Model S Home.png?raw=true)
