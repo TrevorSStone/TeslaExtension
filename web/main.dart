@@ -1,8 +1,7 @@
 library tesla_main;
-@MirrorsUsed(
-    targets: const ['tesla_service', 'charge_state', 'climate_state', 'drive_state', 'vehicle_state', 'vehicles', 'gui_settings', 'tesla_routing'],
-    override: '*'
-)
+@MirrorsUsed(targets: const ['tesla_service', 'charge_state', 'climate_state',
+    'drive_state', 'vehicle_state', 'vehicles', 'gui_settings', 'tesla_routing'],
+    override: '*')
 import 'dart:mirrors';
 
 import 'package:angular/angular.dart';
@@ -30,8 +29,8 @@ class TeslaModule extends Module {
     type(TeslaChargeControls);
     type(TeslaChargeRate);
     value(RouteInitializerFn, teslaRouteInitializer);
-    factory(NgRoutingUsePushState,
-        (_) => new NgRoutingUsePushState.value(false));
+    factory(NgRoutingUsePushState, (_) => new NgRoutingUsePushState.value(false)
+        );
   }
 }
 

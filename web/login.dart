@@ -1,8 +1,5 @@
 library tesla_login;
-@MirrorsUsed(
-	targets: const ['tesla_service'],
-    override: '*'
-)
+@MirrorsUsed(targets: const ['tesla_service'], override: '*')
 import 'dart:mirrors';
 
 import 'package:angular/angular.dart';
