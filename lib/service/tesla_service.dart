@@ -73,19 +73,24 @@ class TeslaService {
       };
       return _http.post(_logoutUrl, uri, headers: headers);
     });
-
-
-
   }
 
   Future postLogin(String username, String password) {
-    String uri =
-        'user_session[email]=$username&user_session[password]=$password';
-    String encoded = Uri.encodeFull(uri);
+    Map<String, String> data = {
+      'user_session[email]': username,
+      'user_session[password]': password
+    };
+    String encoded = encodeMap(data);
     Map<String, String> headers = {
       'Content-Type': 'application/x-www-form-urlencoded'
     };
     return _http.post(_loginUrl, encoded, headers: headers);
+  }
+
+  String encodeMap(Map data) {
+    return data.keys.map((k) {
+      return '${Uri.encodeComponent(k)}=${Uri.encodeComponent(data[k])}';
+    }).join('&');
   }
 
   Future vehicles() {
