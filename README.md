@@ -1,4 +1,6 @@
 #Tesla Model S Control
+**Tesla Motors has asked me to say that Tesla Model S vehicle owners should not use this software.**
+
 [Link to Extension](https://chrome.google.com/webstore/detail/tesla-model-s-control/beoeghbnbaphdhjgeclajnniaghnfofk)
 
 **I need your help. Unfortunately, I have not recieved permission to use their images in my application. I replaced all images with ugly placeholder art. If you, or someone you know would be able to help bring some beauty back to the extension please contact me and check out the [reddit thread](http://www.reddit.com/r/teslamotors/comments/1yu9g9/i_created_a_tesla_model_s_chrome_extension_and/) and the [Tesla motor club thread](http://www.teslamotorsclub.com/showthread.php/27932-I-Created-a-Tesla-Model-S-Chrome-Extension-and-Need-Your-Help)**
