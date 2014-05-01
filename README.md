@@ -3,7 +3,7 @@
 
 [Link to Extension](https://chrome.google.com/webstore/detail/tesla-model-s-control/beoeghbnbaphdhjgeclajnniaghnfofk)
 
-![Current Version](/screenshots/new/Tesla Model S Home.png?raw=true)
+![Current Version](/screenshots/Tesla Model S Home.png?raw=true)
 
 
 This application is for owners of the Tesla Model S.
