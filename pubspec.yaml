@@ -8,4 +8,10 @@ dependencies:
 dev_dependencies:
   unittest: any
 transformers:
-- angular
+- angular:
+    html_files:
+    - web/view/charge.html
+    - web/view/climate.html
+    - web/view/controls.html
+    - web/view/home.html
+    - web/view/location.html
