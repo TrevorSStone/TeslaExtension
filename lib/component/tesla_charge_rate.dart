@@ -5,12 +5,9 @@ import 'package:tesla_extension/service/charge_state.dart';
 import 'package:tesla_extension/service/gui_settings.dart';
 import 'dart:async';
 
-@NgComponent(selector: 'tesla-charge-rate', templateUrl:
+@Component(selector: 'tesla-charge-rate', templateUrl:
     'packages/tesla_extension/component/tesla_charge_rate.html', cssUrl:
-    'packages/tesla_extension/component/tesla_charge_rate.css', publishAs: 'ctrl',
-    map: const {
-  'vehicle-id': '=>vehicleID'
-})
+    'packages/tesla_extension/component/tesla_charge_rate.css', publishAs: 'ctrl')
 class TeslaChargeRate {
   ChargeState chargestate;
   Map<String, num> levels = {
@@ -27,7 +24,9 @@ class TeslaChargeRate {
   num id;
   GUI_Settings guiSettings;
   TeslaChargeRate(Http this._http, TeslaService this._teslaService);
-  set vehicleID(num vID) {
+
+  @NgTwoWay('vehicle-id')
+  void set vehicleID(num vID) {
     if (vID > 0) {
       id = vID;
       _updateCharge();

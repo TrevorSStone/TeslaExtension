@@ -2,7 +2,7 @@ library tesla_nav_component;
 
 import 'package:angular/angular.dart';
 
-@NgComponent(selector: 'tesla-nav', templateUrl:
+@Component(selector: 'tesla-nav', templateUrl:
     'packages/tesla_extension/component/tesla_nav_component.html', cssUrl:
     'packages/tesla_extension/component/tesla_nav_component.css', publishAs: 'ctrl')
 class TeslaNavComponent {

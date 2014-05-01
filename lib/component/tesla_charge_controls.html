@@ -1,5 +1,6 @@
 <div id="controls">
 	<header>Set Charge Limit</header>
+	<ul>
 	<li 
 		ng-repeat="chargelevel in ctrl.getChargeLevels()" 
 		class="button" 
@@ -7,4 +8,5 @@
 		ng-click="ctrl.setChargeLevel(chargelevel)">
 			{{chargelevel}}
 		</li>
+	</ul>
 </div>

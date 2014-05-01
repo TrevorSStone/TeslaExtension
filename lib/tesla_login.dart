@@ -4,7 +4,7 @@ import 'dart:async';
 import 'dart:html';
 import 'package:angular/angular.dart';
 import 'package:tesla_extension/service/tesla_service.dart';
-@NgController(selector: '[tesla-login]', publishAs: 'ctrl')
+@Controller(selector: '[tesla-login]', publishAs: 'ctrl')
 class TeslaLoginController {
 
   Http _http;
@@ -21,7 +21,7 @@ class TeslaLoginController {
         sleep2().then((_) => hideLogo = true);
       }
     }, onError: (Object obj) {
-      print("error");
+      print(obj);
     });
   }
 

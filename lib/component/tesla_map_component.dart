@@ -6,13 +6,10 @@ import 'package:google_maps/google_maps.dart';
 import 'dart:async';
 import 'dart:html';
 
-@NgComponent(selector: 'tesla-map', templateUrl:
+@Component(selector: 'tesla-map', templateUrl:
     'packages/tesla_extension/component/tesla_map_component.html', cssUrl:
-    'packages/tesla_extension/component/tesla_map_component.css', publishAs: 'map',
-    map: const {
-  'vehicle-id': '=>vehicleID'
-})
-class TeslaMapComponent extends NgShadowRootAware {
+    'packages/tesla_extension/component/tesla_map_component.css', publishAs: 'map')
+class TeslaMapComponent extends ShadowRootAware {
   TeslaService _teslaService;
   TeslaService get teslaService => _teslaService;
   Http _http;
@@ -47,7 +44,10 @@ class TeslaMapComponent extends NgShadowRootAware {
     _mapInitializeStream.add(true);
   }
 
-  set vehicleID(num vID) {
+@NgAttr('vehicle-id')
+  void set vehicleID(String vIDs) {
+    var vID = int.parse(vIDs, onError: (_) => 0);
+    assert(vID is int);
     if (vID > 0) {
       id = vID;
       _updateDrive();

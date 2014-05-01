@@ -1,0 +1,177 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" 
+  version="1.1" baseProfile="full" width="466" height="200" viewBox="0 0 466 200">
+ 
+<g id="cargroup" opacity="1"
+  fill="white"
+  stroke="black" stroke-width="1">
+<g>
+ <path id="bodytop" d="
+    M 70 98
+    Q 70 75 84 40
+    S 100 30 128 30
+    Q 140 30 145 32
+    Q 143 32 143 35
+    S 143 40 148 43
+    Q 180 38 208 39
+    Q 240 38 270 42
+    Q 277 42 277 36
+    Q 280 35 287 36
+    Q 300 30 340 39
+
+    Q 355 45 360 65
+
+    Q 363 70 365 75
+
+    Q 369 95 368 98
+
+    " 
+    />
+ <path id="rddoor" d="
+    M 150 32
+    Q 143 32 143 35
+    S 143 40 148 43
+    Q 180 38 208 39
+    L 210 35
+    Q 180 35 150 32
+    " 
+    
+    />
+
+
+     <path id="fddoor" d="
+    M 208 39
+  Q 240 38 270 42
+    Q 277 42 277 36
+    Q 270 34.5 266 35
+    Q 262 28 257 25
+    Q 253 23 250 23
+    L 255 35
+    Q 230 34 210 35
+    Z
+    " 
+    />
+
+  <path class="fwindow" d="
+  M 300 99
+  Q 300 65 285 49
+  L 235 55
+  Q 245 65 245 99
+    "
+    fill="grey"
+  />
+
+    <path class="rwindow" d="
+  M 88 99
+  Q 88 60 105 60
+  Q 120 59 140 60
+  Q 138 75 138 99
+    "
+    fill="grey"
+  />
+  <path class="roof" d="
+  M 138 98.5
+  Q 138 75 140 60
+  L 235 55
+  Q 245 65 245 98.5
+    "
+    fill="none"/>
+
+  <path class="arrow" d="
+  M 230 98.5
+  l 0 -10
+  l -50 0
+  l 0 -15
+  l -25 25
+    "
+    fill="none"/>
+
+
+  </g>
+
+
+
+  <g opacity="1" transform="translate(0, 196) scale(1, -1) " >
+ <path id="bodybot" d="
+    M 70 98
+    Q 70 75 84 40
+    S 100 30 128 30
+    Q 140 30 145 32
+    Q 143 32 143 35
+    S 143 40 148 43
+    Q 180 38 208 39
+    Q 240 38 270 42
+    Q 277 42 277 36
+    Q 280 35 287 36
+    Q 300 30 340 39
+
+    Q 355 45 360 65
+
+    Q 363 70 365 75
+
+    Q 369 95 368 98
+
+    " 
+    />
+ <path id="rpdoor" d="
+    M 150 32
+    Q 143 32 143 35
+    S 143 40 148 43
+    Q 180 38 208 39
+    L 210 35
+    Q 180 35 150 32
+    " 
+    />
+
+
+     <path id="fpdoor" d="
+    M 208 39
+  Q 240 38 270 42
+    Q 277 42 277 36
+    Q 270 34.5 266 35
+    Q 262 28 257 25
+    Q 253 23 250 23
+    L 255 35
+    Q 230 34 210 35
+    Z
+    " 
+    />
+
+        
+      <path class="fwindow" d="
+  M 300 99
+  Q 300 65 285 49
+  L 235 55
+  Q 245 65 245 99
+    "
+    fill="grey"
+  />
+  <path class="rwindow" d="
+  M 88 99
+  Q 88 60 105 60
+  Q 120 59 140 60
+  Q 138 75 138 99
+    "
+    fill="grey"
+  />
+    <path class="roof" d="
+  M 138 98.5
+  Q 138 75 140 60
+  L 235 55
+  Q 245 65 245 98.5
+    "
+    fill="none"/>
+
+  <path class="arrow" d="
+  M 230 98.5
+  l 0 -10
+  l -50 0
+  l 0 -15
+  l -25 25
+    "
+    fill="none"/>
+
+  </g>
+</g>
+</svg>

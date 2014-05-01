@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" 
+  version="1.1" baseProfile="full" width="322" height="182" viewBox="0 0 322 182">
+
+ <path d="
+    M 15 0
+    Q 15 120 50 160
+    L 272 160
+    Q 307 120 307 0
+    Z" 
+    style="fill: black;stroke-width:2;stroke:#828282"/>
+ <path d="
+    M 140 95
+    l 50 0
+    l -25 30
+    Z" 
+    style="fill: #828282"/>
+</svg>

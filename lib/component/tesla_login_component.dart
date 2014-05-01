@@ -4,7 +4,7 @@ import 'dart:html';
 import '../service/tesla_service.dart';
 import 'package:angular/angular.dart';
 
-@NgComponent(selector: 'tesla-login-form', templateUrl:
+@Component(selector: 'tesla-login-form', templateUrl:
     'packages/tesla_extension/component/tesla_login_component.html', cssUrl:
     'packages/tesla_extension/component/tesla_login_component.css', publishAs:
     'ctrl', map: const {

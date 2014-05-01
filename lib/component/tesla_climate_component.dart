@@ -4,14 +4,13 @@ import 'package:tesla_extension/service/tesla_service.dart';
 import 'package:tesla_extension/service/climate_state.dart';
 import 'package:tesla_extension/service/gui_settings.dart';
 import 'dart:async';
+import 'dart:html';
 
-@NgComponent(selector: 'tesla-climate', templateUrl:
+@Component(selector: 'tesla-climate', templateUrl:
     'packages/tesla_extension/component/tesla_climate_component.html', cssUrl:
     'packages/tesla_extension/component/tesla_climate_component.css', publishAs:
-    'climate', map: const {
-  'vehicle-id': '=>vehicleID'
-})
-class TeslaClimateComponent {
+    'climate')
+class TeslaClimateComponent extends ShadowRootAware{
   ClimateState climatestate;
 
   TeslaService _teslaService;
@@ -23,7 +22,21 @@ class TeslaClimateComponent {
   num counter = 0;
   bool isFarenheit = false;
   TeslaClimateComponent(Http this._http, TeslaService this._teslaService);
-  set vehicleID(num vID) {
+
+  void onShadowRoot(ShadowRoot shadowRoot) {
+
+     
+     HttpRequest.getString('../svg/car/climatebody.svg').then((text) {
+       var inner = shadowRoot.querySelector("#car");
+       inner.setInnerHtml(text);    
+       
+     });  
+   }
+
+@NgAttr('vehicle-id')
+  void set vehicleID(String vIDs) {
+    var vID = int.parse(vIDs, onError: (_) => 0);
+    assert(vID is int);
     if (vID > 0) {
       id = vID;
       _updateClimate();
@@ -214,18 +227,22 @@ class TeslaClimateComponent {
     return true;
   }
 
-  bool rearHeater() {
+  String rearHeater() {
     if (climatestate != null) {
-      return climatestate.rearDefroster;
+      if (climatestate.rearDefroster){
+        return "rear-defrost";
+      }
     }
-    return false;
+    return "";
   }
 
-  bool frontDefrost() {
+  String frontDefrost() {
     if (climatestate != null) {
-      return climatestate.frontDefroster != 0;
+      if(climatestate.frontDefroster != 0){
+        return "front-defrost";
+      }
     }
-    return false;
+    return "";
   }
 
   num diffAmount() {

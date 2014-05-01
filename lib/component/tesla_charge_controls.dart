@@ -3,13 +3,14 @@ import 'package:angular/angular.dart';
 import 'package:tesla_extension/service/tesla_service.dart';
 import 'dart:async';
 
-@NgComponent(selector: 'tesla-charge-controls', templateUrl:
+@Component(selector: 'tesla-charge-controls', templateUrl:
     'packages/tesla_extension/component/tesla_charge_controls.html', cssUrl:
     'packages/tesla_extension/component/tesla_charge_controls.css', publishAs:
-    'ctrl', map: const {
-  'vehicle-id': '=>vehicleID'
-})
+    'ctrl'
+)
 class TeslaChargeControls {
+  List keyList;
+
   Map<String, num> levels = {
     "50%": 50,
     "60%": 60,
@@ -22,17 +23,22 @@ class TeslaChargeControls {
   TeslaService get teslaService => _teslaService;
   Http _http;
   num id;
-  TeslaChargeControls(Http this._http, TeslaService this._teslaService);
+  TeslaChargeControls(Http this._http, TeslaService this._teslaService){
+     keyList = levels.keys.toList();
+   }
   List getChargeLevels() {
-    return levels.keys.toList();
+    return keyList;
   }
 
-  set vehicleID(num vID) {
+  @NgAttr('vehicle-id')
+  void set vehicleID(String vIDs) {
+    var vID = int.parse(vIDs, onError: (_) => 0);
+    assert(vID is int);
     if (vID > 0) {
       id = vID;
+    
     }
   }
-
   bool settingChargeLevel = false;
   void setChargeLevel(String key) {
     if (id == null || id <= 0 || settingChargeLevel) {

@@ -5,13 +5,10 @@ import 'package:tesla_extension/service/charge_state.dart';
 import 'package:tesla_extension/service/gui_settings.dart';
 import 'dart:async';
 
-@NgComponent(selector: 'tesla-battery', templateUrl:
+@Component(selector: 'tesla-battery', templateUrl:
     'packages/tesla_extension/component/tesla_battery_component.html', cssUrl:
     'packages/tesla_extension/component/tesla_battery_component.css', publishAs:
-    'battery', map: const {
-  'vehicle-id': '=>vehicleID',
-  'show-limit': '=>showlimit'
-})
+    'battery')
 class TeslaBatteryComponent {
   ChargeState chargestate;
 
@@ -20,13 +17,19 @@ class TeslaBatteryComponent {
   Http _http;
   num id;
   GUI_Settings guiSettings;
+    @NgTwoWay('show-limit')
   bool showlimit = false;
+
+  void set slimit(String sl) {
+    showlimit = (sl == "true");
+  }
+
   TeslaBatteryComponent(Http this._http, TeslaService this._teslaService);
-  set vehicleID(num vID) {
+@NgTwoWay('vehicle-id')
+  void set vehicleID(num vID) {
     if (vID > 0) {
       id = vID;
       _updateCharge();
-
       _teslaService.GUISettings(id).then((GUI_Settings settings) {
         guiSettings = settings;
       }, onError: (Object obj) {

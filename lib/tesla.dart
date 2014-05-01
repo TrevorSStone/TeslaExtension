@@ -11,7 +11,7 @@ import 'package:tesla_extension/service/climate_state.dart';
 import 'package:tesla_extension/service/charge_state.dart';
 import 'package:tesla_extension/service/drive_state.dart';
 
-@NgController(selector: '[tesla]', publishAs: 'ctrl')
+@Controller(selector: '[tesla]', publishAs: 'ctrl')
 class TeslaController {
 
   Http _http;
@@ -234,7 +234,7 @@ class TeslaController {
         return "sunroof";
         break;
       case 'RFBK':
-        return 'black';
+        return 'blackroof';
         break;
       default:
         return "";
@@ -469,7 +469,7 @@ class TeslaController {
     if (drivestate.shiftState != null && drivestate.shiftState != "P") {
       return false;
     }
-    if (!chargestate.chargePortDoorOpen && chargestate.chargingState ==
+    if (chargestate.chargePortDoorOpen != null && !chargestate.chargePortDoorOpen && chargestate.chargingState ==
         "Disconnected") {
       return true;
     }

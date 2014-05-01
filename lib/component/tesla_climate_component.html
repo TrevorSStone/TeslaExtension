@@ -3,14 +3,8 @@
 		<div id="inside-temp" ng-if="climate.showInteriorTemp()">Interior Temperature: {{climate.interiorTemp()}}<sup>°</sup>{{climate.temperatureUnits()}}</div>
 		<div id="outside-temp" ng-if="climate.showExteriorTemp()">Exterior Temperature: {{climate.exteriorTemp()}}<sup>°</sup>{{climate.temperatureUnits()}}</div>
 	</header>
-	<div id="car">
-	</div>
-	<div id="climate" ng-class="climate.climateClass()">
-	</div>
-	<div id="front-window" ng-if="climate.frontDefrost()" ng-class="climate.climateClass()">
-	</div>
-	<div id="rear-window" ng-if="climate.rearHeater()">
-	</dic>
+	<svg id="car" ng-class="[climate.climateClass(), climate.frontDefrost(), climate.rearHeater()]">
+	</svg>
 </div>
 <div id="control-background">
 	<div id="control-container" ng-class="climate.buttonClass()">

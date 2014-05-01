@@ -2,35 +2,62 @@ library tesla_car_component;
 import 'package:angular/angular.dart';
 import 'package:tesla_extension/service/tesla_service.dart';
 import 'package:tesla_extension/service/vehicle_state.dart';
+import 'dart:html';
 import 'dart:async';
 
-@NgComponent(selector: 'tesla-car', templateUrl:
+@Component(selector: 'tesla-car', templateUrl:
     'packages/tesla_extension/component/tesla_car_component.html', cssUrl:
-    'packages/tesla_extension/component/tesla_car_component.css', publishAs: 'car',
-    map: const {
-  'vehicle-id': '=>vehicleID',
-  'roof-type': '=>roofType',
-  'wheel-type': '=>wheelType',
-  'plugged-in': '=>pluggedin',
-  'charge-door-open': '=>chargeDoorOpen',
-  'car-color': '=>carColor'
-})
-class TeslaCarComponent {
+    'packages/tesla_extension/component/tesla_car_component.css', publishAs: 'car')
+class TeslaCarComponent extends ShadowRootAware {
   VehicleState state;
   TeslaService _teslaService;
   TeslaService get teslaService => _teslaService;
   Http _http;
   num id;
+  
+   @NgTwoWay('car-color')
   String carColor = "";
+   
+   @NgTwoWay('roof-type')
   String roofType;
+   
+   @NgTwoWay('wheel-type')
   String wheelType;
+   
+ @NgTwoWay('plugged-in')
   bool pluggedin = false;
+   
+  void set plugged(String pi) {
+    pluggedin = (pi == "true");
+  }
+
+
+  @NgTwoWay('charge-door-open')
   bool chargeDoorOpen = false;
+    void set chargeOpen(String co) {
+    chargeDoorOpen = (co == "true");
+  }
+
   TeslaCarComponent(Http this._http, TeslaService this._teslaService);
-  set vehicleID(num vID) {
+  
+  void onShadowRoot(ShadowRoot shadowRoot) {
+
+     
+     HttpRequest.getString('../svg/car/body.svg').then((text) {
+       var inner = shadowRoot.querySelector("#car");
+       inner.setInnerHtml(text);    
+       
+     });  
+   }
+  
+  @NgTwoWay('vehicle-id')
+  void set vehicleID(num vID) {
+    // var vID = int.parse(vIDs, onError: (_) => 0);
+    // assert(vID is int);
     if (vID > 0) {
       id = vID;
       _updateCar();
+    
     }
   }
 
@@ -47,10 +74,10 @@ class TeslaCarComponent {
   String chargeState() {
     String classes = "";
     if (chargeDoorOpen) {
-      classes = "open";
+      classes = "chargeopen";
     }
     if (pluggedin) {
-      classes = "open pluggedin";
+      classes = "chargeopen pluggedin";
     }
 
     return classes;
@@ -59,6 +86,9 @@ class TeslaCarComponent {
   String roof() {
     if (state != null) {
       if (state.sunRoofState == "unknown") {
+        if (state.sunRoofPercent == 0){
+          return "$roofType";
+        }
         if (state.sunRoofPercent > 0 && state.sunRoofPercent < 50) {
           return "$roofType vent";
         }
@@ -81,7 +111,7 @@ class TeslaCarComponent {
   String leftFront() {
     if (state != null) {
       if (state.driverFrontOpen != 0) {
-        return "open";
+        return "fdopen";
       }
     }
     return "";
@@ -90,7 +120,7 @@ class TeslaCarComponent {
   String leftRear() {
     if (state != null) {
       if (state.driverRearOpen != 0) {
-        return "open";
+        return "rdopen";
       }
     }
     return "";
@@ -99,7 +129,7 @@ class TeslaCarComponent {
   String rightFront() {
     if (state != null) {
       if (state.passFrontOpen != 0) {
-        return "open";
+        return "fpopen";
       }
     }
     return "";
@@ -109,7 +139,7 @@ class TeslaCarComponent {
   String rightRear() {
     if (state != null) {
       if (state.passRearOpen != 0) {
-        return "open";
+        return "rpopen";
       }
     }
     return "";

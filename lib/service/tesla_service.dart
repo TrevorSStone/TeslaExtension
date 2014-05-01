@@ -8,7 +8,7 @@ import 'package:tesla_extension/service/charge_state.dart';
 import 'package:tesla_extension/service/climate_state.dart';
 import 'package:tesla_extension/service/drive_state.dart';
 
-
+@Injectable()
 class TeslaService {
   static const String _baseUrl = 'https://portal.vn.teslamotors.com';
   static const String _loginUrl = '$_baseUrl/login';

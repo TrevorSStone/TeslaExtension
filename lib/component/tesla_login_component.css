@@ -3,26 +3,24 @@
   height: 43px;
   margin-left: auto;
   margin-right: auto;
-  /*background: url('../images/login_logo.png') no-repeat;*/
-  /*background-size: 305px 43px;*/
-  color:white;
+  color: white;
   text-align: center;
   font-size: 3em;
   letter-spacing: .5em;
-  padding-bottom: .75rem;
+  padding-bottom: .75rem
 }
 fieldset {
   border: 0;
   display: block;
   margin: 1.0em auto;
   text-align: center;
-  padding: 0;
+  padding: 0
 }
 legend {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  color: white;
+  color: white
 }
 input {
   font-size: 2em;
@@ -31,11 +29,11 @@ input {
   margin-top: .5em;
   -webkit-border-radius: 8px;
   border-radius: 8px;
-  width: 90%;
+  width: 90%
 }
 #error {
   font-size: 1.5em;
   color: white;
   margin-left: .75em;
-  margin-right: .75em;
+  margin-right: .75em
 }

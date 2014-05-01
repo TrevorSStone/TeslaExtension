@@ -22,12 +22,12 @@ body {
   overflow-x: hidden;
   font-family: 'montserratregular', Fallback, sans-serif
 }
-#version{
+#version {
   position: absolute;
   bottom: 0;
   right: 0;
   color: white;
-  font-size: .75em;
+  font-size: .75em
 }
 .tesla-logo {
   position: absolute;
@@ -141,18 +141,18 @@ tesla-car {
   float: left;
   margin: .5em
 }
-tesla-car {
+tesla-car, .tesla-car {
   position: absolute;
   top: 8em;
   width: 100%
 }
-tesla-battery {
+tesla-battery, .tesla-battery {
   position: absolute;
   top: 19em;
   width: 100%;
   left: 0
 }
-tesla-charge-controls {
+tesla-charge-controls, .tesla-charge-controls {
   position: relative;
   top: 4.5em
 }
@@ -178,12 +178,12 @@ tesla-charge-rate {
 }
 .padlock.locked {
   display: block;
-  background: url(../images/lock_lock.png) no-repeat;
+  background: url(../svg/lock_lock.svg) no-repeat;
   background-size: 100% auto
 }
 .padlock.unlocked {
   display: block;
-  background: url(../images/lock_unlock.png) no-repeat;
+  background: url(../svg/lock_unlock.svg) no-repeat;
   background-size: 100% auto
 }
 #homelock {
@@ -241,7 +241,7 @@ tesla-charge-rate {
   left: 50%;
   box-shadow: 0 10px white, 0 -10px #fff;
   margin-left: -10px;
-  -webkit-animation: rotate2 8s infinite linear;
+  -webkit-animation: rotate2 8s infinite linear
 }
 #loading-screen span {
   font-size: 1.5em;
@@ -253,27 +253,27 @@ tesla-charge-rate {
 }
 #loading-screen div:nth-child(2) {
   box-shadow: 0 -20px white, 0 20px #fff;
-  -webkit-animation: rotate 7.5s infinite linear;
+  -webkit-animation: rotate 7.5s infinite linear
 }
 #loading-screen div:nth-child(3) {
   box-shadow: 0 30px white, 0 -30px #fff;
-  -webkit-animation: rotate2 7s infinite linear;
+  -webkit-animation: rotate2 7s infinite linear
 }
 #loading-screen div:nth-child(4) {
   box-shadow: 0 -40px white, 0 40px #fff;
-  -webkit-animation: rotate 6.5s infinite linear;
+  -webkit-animation: rotate 6.5s infinite linear
 }
 #loading-screen div:nth-child(5) {
   box-shadow: 0 50px white, 0 -50px #fff;
-  -webkit-animation: rotate2 6s infinite linear;
+  -webkit-animation: rotate2 6s infinite linear
 }
 @-webkit-keyframes rotate {
-100% {
-  -webkit-transform: rotate(360deg)
-}
+  100% {
+    -webkit-transform: rotate(360deg)
+  }
 }
 @-webkit-keyframes rotate2 {
-100% {
-  -webkit-transform: rotate(-360deg)
-}
+  100% {
+    -webkit-transform: rotate(-360deg)
+  }
 }
