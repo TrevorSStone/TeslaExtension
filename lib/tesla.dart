@@ -41,8 +41,7 @@ class TeslaController {
     }).then((_) {
       return _checkMobile();
     }).then((_) {
-      _teslaService.GUISettings(currentVehicle.id).then((GUI_Settings settings)
-          {
+      _teslaService.GUISettings(currentVehicle.id).then((GUI_Settings settings) {
         guiSettings = settings;
       }, onError: (Object obj) {
         print(obj);
@@ -75,8 +74,7 @@ class TeslaController {
   }
 
   Future _updateCar() {
-    return _teslaService.vehicleState(currentVehicle.id).then((VehicleState
-        vstate) {
+    return _teslaService.vehicleState(currentVehicle.id).then((VehicleState vstate) {
       vehiclestate = vstate;
     }).then((_) {
       _teslaService.vehicleUpdate.listen((VehicleState vstate) {
@@ -86,8 +84,7 @@ class TeslaController {
   }
 
   Future _updateCharge() {
-    return _teslaService.chargeState(currentVehicle.id).then((ChargeState
-        cstate) {
+    return _teslaService.chargeState(currentVehicle.id).then((ChargeState cstate) {
       chargestate = cstate;
     }).then((_) {
       _teslaService.chargeUpdate.listen((ChargeState cstate) {
@@ -97,8 +94,7 @@ class TeslaController {
   }
 
   Future _updateClimate() {
-    return _teslaService.climateState(currentVehicle.id).then((ClimateState
-        cstate) {
+    return _teslaService.climateState(currentVehicle.id).then((ClimateState cstate) {
       climatestate = cstate;
     }).then((_) {
       _teslaService.climateUpdate.listen((ClimateState cstate) {
@@ -108,8 +104,7 @@ class TeslaController {
   }
 
   Future _updateDrive() {
-    return _teslaService.driveState(currentVehicle.id).then((DriveState dstate)
-        {
+    return _teslaService.driveState(currentVehicle.id).then((DriveState dstate) {
       drivestate = dstate;
       updateAddress();
     }).then((_) {
@@ -150,8 +145,7 @@ class TeslaController {
   }
 
   void updateAddress() {
-    _teslaService.googleGeocode(drivestate.latitude, drivestate.longitude).then(
-        (String add) {
+    _teslaService.googleGeocode(drivestate.latitude, drivestate.longitude).then((String add) {
       currentAddress = add;
     });
   }
@@ -164,40 +158,43 @@ class TeslaController {
     if (options.length < 7) {
       return "";
     }
-    switch (options[6]) {
-      case 'PBSB':
-        return "black";
-        break;
-      case 'PBCW':
-        return 'white';
-        break;
-      case 'PMSS':
-        return 'silver';
-        break;
-      case 'PMTG':
-        return 'gray';
-        break;
-      case 'PMAB':
-        return 'brown';
-        break;
-      case 'PMMB':
-        return 'blue';
-        break;
-      case 'PMSG':
-        return 'green';
-        break;
-      case 'PPSW':
-        return 'pearlwhite';
-        break;
-      case 'PPMR':
-        return 'newred';
-        break;
-      case 'PPSR':
-        return 'red';
-        break;
-      default:
-        return "white";
+    for (final option in options) {
+      switch (option) {
+        case 'PBSB':
+          return "black";
+          break;
+        case 'PBCW':
+          return 'white';
+          break;
+        case 'PMSS':
+          return 'silver';
+          break;
+        case 'PMTG':
+          return 'gray';
+          break;
+        case 'PMAB':
+          return 'brown';
+          break;
+        case 'PMMB':
+          return 'blue';
+          break;
+        case 'PMSG':
+          return 'green';
+          break;
+        case 'PPSW':
+          return 'pearlwhite';
+          break;
+        case 'PPMR':
+          return 'newred';
+          break;
+        case 'PPSR':
+          return 'red';
+          break;
+        default:
+          break;
+      }
     }
+    return "";
   }
 
   String currentVehicleRims() {
@@ -208,16 +205,19 @@ class TeslaController {
     if (options.length < 9) {
       return "";
     }
-    switch (options[8]) {
-      case 'WTSP':
-        return "grey";
-        break;
-      case 'WTSG':
-        return 'grey';
-        break;
-      default:
-        return "";
+    for (final option in options) {
+      switch (option) {
+        case 'WTSP':
+          return "grey";
+          break;
+        case 'WTSG':
+          return 'grey';
+          break;
+        default:
+          break;
+      }
     }
+    return "";
   }
 
   String currentRoofType() {
@@ -228,17 +228,20 @@ class TeslaController {
     if (options.length < 8) {
       return "";
     }
-    switch (options[7]) {
-      case 'RFPO':
-        _hasSunroof = true;
-        return "sunroof";
-        break;
-      case 'RFBK':
-        return 'blackroof';
-        break;
-      default:
-        return "";
+    for (final option in options) {
+      switch (option) {
+        case 'RFPO':
+          _hasSunroof = true;
+          return "sunroof";
+          break;
+        case 'RFBK':
+          return 'blackroof';
+          break;
+        default:
+          break;
+      }
     }
+    return "";
   }
 
   bool showSunroofButton() {
@@ -255,8 +258,7 @@ class TeslaController {
         locking = true;
         _teslaService.lockDoors(currentVehicle.id).then((_) {
           new Future.delayed(new Duration(seconds: 1), () {
-            _teslaService.vehicleState(currentVehicle.id, true).whenComplete(()
-                {
+            _teslaService.vehicleState(currentVehicle.id, true).whenComplete(() {
               locking = false;
             });
           });
@@ -275,8 +277,7 @@ class TeslaController {
         unlocking = true;
         _teslaService.unlockDoors(currentVehicle.id).whenComplete(() {
           new Future.delayed(new Duration(seconds: 1), () {
-            _teslaService.vehicleState(currentVehicle.id, true).whenComplete(()
-                {
+            _teslaService.vehicleState(currentVehicle.id, true).whenComplete(() {
               unlocking = false;
             });
           });
@@ -400,8 +401,7 @@ class TeslaController {
       return;
     }
     togglingCharging = true;
-    if (!chargestate.chargePortDoorOpen || chargestate.chargingState ==
-        "Disconnected") {
+    if (!chargestate.chargePortDoorOpen || chargestate.chargingState == "Disconnected") {
       _teslaService.openChargePort(currentVehicle.id).whenComplete(() {
         new Future.delayed(new Duration(seconds: 1), () {
           _teslaService.vehicleState(currentVehicle.id, true);
@@ -415,8 +415,7 @@ class TeslaController {
         case 'Stopped':
           _teslaService.startCharging(currentVehicle.id).whenComplete(() {
             new Future.delayed(new Duration(seconds: 8), () {
-              _teslaService.chargeState(currentVehicle.id, true).whenComplete(()
-                  {
+              _teslaService.chargeState(currentVehicle.id, true).whenComplete(() {
                 togglingCharging = false;
               });
             });
@@ -425,8 +424,7 @@ class TeslaController {
         default:
           _teslaService.stopCharging(currentVehicle.id).whenComplete(() {
             new Future.delayed(new Duration(seconds: 8), () {
-              _teslaService.chargeState(currentVehicle.id, true).whenComplete(()
-                  {
+              _teslaService.chargeState(currentVehicle.id, true).whenComplete(() {
                 togglingCharging = false;
               });
             });
@@ -448,8 +446,7 @@ class TeslaController {
     if (chargestate == null) {
       return "";
     }
-    if (!chargestate.chargePortDoorOpen || chargestate.chargingState ==
-        "Disconnected") {
+    if (!chargestate.chargePortDoorOpen || chargestate.chargingState == "Disconnected") {
       return "Open Charge Port";
     }
     switch (chargestate.chargingState) {
@@ -469,13 +466,11 @@ class TeslaController {
     if (drivestate.shiftState != null && drivestate.shiftState != "P") {
       return false;
     }
-    if (chargestate.chargePortDoorOpen != null && !chargestate.chargePortDoorOpen && chargestate.chargingState ==
-        "Disconnected") {
+    if (chargestate.chargePortDoorOpen != null && !chargestate.chargePortDoorOpen && chargestate.chargingState == "Disconnected") {
       return true;
     }
-    if (chargestate.chargingState != "Complete" && chargestate.chargeLimitSoc >
-        chargestate.batteryLevel) {
-        //TODO: or when not in park or when charging complete
+    if (chargestate.chargingState != "Complete" && chargestate.chargeLimitSoc > chargestate.batteryLevel) {
+      //TODO: or when not in park or when charging complete
       return true;
     }
     return false;
@@ -485,9 +480,7 @@ class TeslaController {
     if (climatestate == null) {
       return "";
     }
-    if ((climatestate.autoConditioningOn != null &&
-        climatestate.autoConditioningOn) || (climatestate.fanStatus != null &&
-        climatestate.fanStatus > 0)) {
+    if ((climatestate.autoConditioningOn != null && climatestate.autoConditioningOn) || (climatestate.fanStatus != null && climatestate.fanStatus > 0)) {
       return "Turn Off";
     }
     return "Turn On";
@@ -509,13 +502,10 @@ class TeslaController {
     }
     if (climatestate != null && !togglingHVAC) {
       togglingHVAC = true;
-      if ((climatestate.autoConditioningOn != null &&
-          climatestate.autoConditioningOn) || (climatestate.fanStatus != null &&
-          climatestate.fanStatus > 0)) {
+      if ((climatestate.autoConditioningOn != null && climatestate.autoConditioningOn) || (climatestate.fanStatus != null && climatestate.fanStatus > 0)) {
         _teslaService.stopHVAC(currentVehicle.id).whenComplete(() {
           new Future.delayed(new Duration(seconds: 5), () {
-            _teslaService.climateState(currentVehicle.id, true).whenComplete(()
-                {
+            _teslaService.climateState(currentVehicle.id, true).whenComplete(() {
               togglingHVAC = false;
             });
           });
@@ -524,8 +514,7 @@ class TeslaController {
       } else {
         _teslaService.startHVAC(currentVehicle.id).whenComplete(() {
           new Future.delayed(new Duration(seconds: 5), () {
-            _teslaService.climateState(currentVehicle.id, true).whenComplete(()
-                {
+            _teslaService.climateState(currentVehicle.id, true).whenComplete(() {
               togglingHVAC = false;
             });
           });
@@ -564,8 +553,7 @@ class TeslaController {
       if (chargestate.timeToFullCharge.floor() > 0) {
         secondline = "${chargestate.timeToFullCharge.floor()} hr ";
       }
-      secondline +=
-          "${timeToChargeMinutes(chargestate.timeToFullCharge).toStringAsFixed(0)} min remaining";
+      secondline += "${timeToChargeMinutes(chargestate.timeToFullCharge).toStringAsFixed(0)} min remaining";
       return "$firstline\n$secondline";
     }
 
@@ -594,8 +582,7 @@ class TeslaController {
       String secondline = "";
       if (drivestate.speed != null && drivestate.speed > 0) {
         if (guiSettings.distanceUnits == "km/hr") {
-          secondline = _mitok(drivestate.speed).toStringAsFixed(0) + " " +
-              "kph";
+          secondline = _mitok(drivestate.speed).toStringAsFixed(0) + " " + "kph";
         } else {
           secondline = drivestate.speed.toStringAsFixed(0) + " " + "mph";
         }
@@ -610,15 +597,13 @@ class TeslaController {
     if (chargestate == null || drivestate == null || guiSettings == null) {
       return "";
     }
-    if (chargestate.chargingState == "Charging" || chargestate.chargingState ==
-        "Starting") {
+    if (chargestate.chargingState == "Charging" || chargestate.chargingState == "Starting") {
       String firstline = "Charging";
       String secondline = "";
       if (chargestate.timeToFullCharge.floor() > 0) {
         secondline = "${chargestate.timeToFullCharge.floor()} hr ";
       }
-      secondline +=
-          "${timeToChargeMinutes(chargestate.timeToFullCharge).toStringAsFixed(0)} min remaining";
+      secondline += "${timeToChargeMinutes(chargestate.timeToFullCharge).toStringAsFixed(0)} min remaining";
       return "$firstline\n$secondline";
     }
 
@@ -634,8 +619,7 @@ class TeslaController {
       return "No Power To Charger";
     }
 
-    if (chargestate.chargingState == "Disconnected" &&
-        chargestate.chargePortDoorOpen) {
+    if (chargestate.chargingState == "Disconnected" && chargestate.chargePortDoorOpen) {
       return "Charge Port Open\nConnect charge cable";
     }
 
