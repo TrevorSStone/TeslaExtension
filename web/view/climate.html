@@ -8,6 +8,6 @@
 	ng-class="ctrl.climateButtonClass()"
 	ng-if="ctrl.showClimateButton()">{{ctrl.climateButtonText()}}</div>
 </header>
-<tesla-climate  vehicle-id="{{ctrl.vehicleID()}}" >
+<tesla-climate  vehicle-id="{{ctrl.vehicleID()}}" car-color="{{ctrl.currentVehicleColor()}}">
 </tesla-climate>
 </div>

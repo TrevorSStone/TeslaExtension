@@ -34,6 +34,7 @@ body {
   width: 400px;
   height: 600px;
   margin: 0;
+  color: white;
   background: -webkit-linear-gradient(270deg, #e31937, #9f1126);
   -webkit-transition-property: opacity;
   -webkit-transition-duration: .75s;
@@ -42,6 +43,18 @@ body {
 }
 .tesla-logo.fade {
   opacity: 0
+}
+.tesla-logo h1 {
+  margin-top: 50%;
+  font-size: 2em;
+  line-height: .5em;
+  text-align: center
+}
+.tesla-logo h2 {
+  font-size: 1em;
+  text-align: right;
+  margin-right: 10%;
+  line-height: .1em
 }
 .login-form {
   padding-top: 2em
@@ -251,6 +264,15 @@ tesla-charge-rate {
   top: 55%;
   color: #fff
 }
+.tesla-logo #loading-screen {
+  -webkit-animation: appear 3s 1 linear
+}
+.tesla-logo #loading-screen div {
+  top: 60%
+}
+.tesla-logo #loading-screen span {
+  top: 75%
+}
 #loading-screen div:nth-child(2) {
   box-shadow: 0 -20px white, 0 20px #fff;
   -webkit-animation: rotate 7.5s infinite linear
@@ -275,5 +297,16 @@ tesla-charge-rate {
 @-webkit-keyframes rotate2 {
   100% {
     -webkit-transform: rotate(-360deg)
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0
+  }
+  80% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
   }
 }

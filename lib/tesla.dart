@@ -162,34 +162,24 @@ class TeslaController {
       switch (option) {
         case 'PBSB':
           return "black";
-          break;
         case 'PBCW':
           return 'white';
-          break;
         case 'PMSS':
           return 'silver';
-          break;
         case 'PMTG':
           return 'gray';
-          break;
         case 'PMAB':
           return 'brown';
-          break;
         case 'PMMB':
           return 'blue';
-          break;
         case 'PMSG':
           return 'green';
-          break;
         case 'PPSW':
           return 'pearlwhite';
-          break;
         case 'PPMR':
           return 'newred';
-          break;
         case 'PPSR':
           return 'red';
-          break;
         default:
           break;
       }

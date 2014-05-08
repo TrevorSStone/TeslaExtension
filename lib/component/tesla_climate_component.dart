@@ -24,14 +24,16 @@ class TeslaClimateComponent extends ShadowRootAware{
   TeslaClimateComponent(Http this._http, TeslaService this._teslaService);
 
   void onShadowRoot(ShadowRoot shadowRoot) {
-
-     
      HttpRequest.getString('../svg/car/climatebody.svg').then((text) {
        var inner = shadowRoot.querySelector("#car");
        inner.setInnerHtml(text);    
        
      });  
    }
+   
+  @NgAttr('car-color')
+  String carColor;
+   
 
 @NgAttr('vehicle-id')
   void set vehicleID(String vIDs) {

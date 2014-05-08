@@ -13,12 +13,12 @@ class TeslaLoginController {
   bool showLogin = false;
   bool hideLogo = false;
   TeslaLoginController(Http this._http, TeslaService this._teslaService) {
-    Future.wait([_teslaService.isLoggedIn()]).then((List responses) {
+    Future.wait([_teslaService.isLoggedIn(), sleep()]).then((List responses) {
       if (responses[0]) {
         window.location.replace('main.html');
       } else {
         showLogin = true;
-        sleep2().then((_) => hideLogo = true);
+        sleep().then((_) => hideLogo = true);
       }
     }, onError: (Object obj) {
       print(obj);
@@ -26,13 +26,16 @@ class TeslaLoginController {
   }
 
   Future sleep() {
-    return new Future.delayed(const Duration(milliseconds: 500), () => ".5");
+    return new Future.delayed(const Duration(milliseconds: 1300), () => "1.3");
   }
   Future sleep2() {
-    return new Future.delayed(const Duration(seconds: 1), () => "1");
+    return new Future.delayed(const Duration(seconds: 100), () => "1");
   }
 
   String logoClass() {
     return showLogin ? "fade" : "";
+  }
+  bool showLogo() {
+    return !hideLogo;
   }
 }

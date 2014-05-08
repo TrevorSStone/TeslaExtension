@@ -16,7 +16,7 @@ class TeslaCarComponent extends ShadowRootAware {
   num id;
   
    @NgTwoWay('car-color')
-  String carColor = "";
+  String carColor;
    
    @NgTwoWay('roof-type')
   String roofType;

@@ -1,15 +1,19 @@
 name: tesla_extension
-version: 0.0.1
+version: 1.1.3
 dependencies:
-  angular: 0.10.0
+  angular: ">=0.11.0 <0.12.0"
   browser: any
   js: any
   google_maps: ">=2.0.0 <3.0.0"
+  dart_to_js_script_rewriter: any
 dev_dependencies:
   unittest: any
 transformers:
+- dart_to_js_script_rewriter
 - angular:
     html_files:
+    - web/login.html
+    - web/main.html
     - web/view/charge.html
     - web/view/climate.html
     - web/view/controls.html
