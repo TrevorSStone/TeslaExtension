@@ -4,19 +4,49 @@
   <title>Tesla Model S Control</title>
   <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
-<body tesla class="main">
-<ng-view ng-if="ctrl.showVehicle()">
-</ng-view>
-<div id="loading-screen" ng-if="ctrl.showLoading()" ng-cloak>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<span>Connecting To Car</span>
+<body>
+
+<div tesla-login class="" >
+	<div ng-if="login.showAll()" class="full tesla-background">
+	<div class="tesla-logo" ng-if="login.showLogo()" ng-class='login.logoClass()'>
+		<h1>Tesla Model S Control</h1>
+		<h2>by Trevor S Stone</h2>
+
+		<div id="loading-screen">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<span>Loading</span>
+	</div>
+	</div>
+	<div class="login-form">
+		<tesla-login-form  ng-if='login.showLogin'>
+		</tesla-login-form>
+	</div>
+	<div id="version">
+	v 1.1.3
+	</div>
 </div>
-<tesla-nav>
-</tesla-nav>
+</div>
+
+<div tesla class="main">
+	<div ng-if="ctrl.loggedIn" class="full" ng-cloak>
+	<ng-view ng-if="ctrl.showVehicle()">
+	</ng-view>
+	<div id="loading-screen" ng-if="ctrl.showLoading()" ng-cloak>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<span>Connecting To Car</span>
+	</div>
+	<tesla-nav>
+	</tesla-nav>
+</div>
+</div>
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKNbfoE8b-8XnaYTrFX6ZU-1zuGAqigvw&sensor=true"></script>
   	<script type="application/dart" src="main.dart"></script>

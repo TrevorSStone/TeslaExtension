@@ -4,7 +4,7 @@ import 'dart:async';
 import 'dart:html';
 import 'package:angular/angular.dart';
 import 'package:tesla_extension/service/tesla_service.dart';
-@Controller(selector: '[tesla-login]', publishAs: 'ctrl')
+@Controller(selector: '[tesla-login]', publishAs: 'login')
 class TeslaLoginController {
 
   Http _http;
@@ -12,10 +12,17 @@ class TeslaLoginController {
   TeslaService get teslaService => _teslaService;
   bool showLogin = false;
   bool hideLogo = false;
+  bool vanish = false;
   TeslaLoginController(Http this._http, TeslaService this._teslaService) {
+    _teslaService.loginUpdate.listen((bool m) {
+        vanish = true;
+      });
+        _teslaService.logoutUpdate.listen((bool m) {
+        vanish = false;
+      });
     Future.wait([_teslaService.isLoggedIn(), sleep()]).then((List responses) {
       if (responses[0]) {
-        window.location.replace('main.html');
+        _teslaService.sendLoginMessage();
       } else {
         showLogin = true;
         sleep().then((_) => hideLogo = true);
@@ -37,5 +44,8 @@ class TeslaLoginController {
   }
   bool showLogo() {
     return !hideLogo;
+  }
+  bool showAll(){
+    return !vanish;
   }
 }

@@ -22,6 +22,7 @@ class TeslaController {
   bool _showVehicle = false;
   bool _showLoading = false;
   bool _hasSunroof = false;
+  bool loggedIn = false;
   Vehicle currentVehicle;
   GUI_Settings guiSettings;
   VehicleState vehiclestate;
@@ -31,13 +32,18 @@ class TeslaController {
   String currentAddress = "";
   num _waitTime = 15;
   TeslaController(Http this._http, TeslaService this._teslaService) {
+
+_teslaService.loginUpdate.listen((bool m) {
+        loggedIn = true;
+   
     _teslaService.vehicles().then((List<Vehicle> vehicles) {
       if (vehicles.length > 0) {
         currentVehicle = vehicles[0];
 
       }
     }, onError: (Object obj) { //TODO different Error if no internet
-      window.location.replace('login.html');
+      _teslaService.sendLogoutMessage();
+      loggedIn = false;
     }).then((_) {
       return _checkMobile();
     }).then((_) {
@@ -52,8 +58,13 @@ class TeslaController {
         _updateDrive();
       });
     });
-
+});
   }
+
+ Future sleep() {
+    return new Future.delayed(const Duration(milliseconds: 100), () => "100");
+  }
+
   Future _checkMobile() {
     return _teslaService.mobileEnabled(currentVehicle.id).then((bool enabled) {
 
@@ -116,7 +127,8 @@ class TeslaController {
   }
 
   void logout() {
-    _teslaService.logout().then((_) => window.location.replace('login.html'));
+    _teslaService.logout().then((_){ window.close();
+      });
   }
 
   String logoClass() {

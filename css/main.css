@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'montserratbold';
   src: url(../css/montserrat-bold-webfont.svg#montserratbold) format("svg");
@@ -19,8 +20,14 @@ body {
   width: 400px;
   height: 600px;
   margin: 0;
-  overflow-x: hidden;
+  font-size: 16px;
+  overflow: hidden;
   font-family: 'montserratregular', Fallback, sans-serif
+}
+.full{
+  height:600px;
+  width:100%;
+  overflow: hidden;
 }
 #version {
   position: absolute;
@@ -60,6 +67,9 @@ body {
   padding-top: 2em
 }
 .tesla-background {
+  position: absolute;
+  width: 400px;
+  height: 600px;
   background: -webkit-linear-gradient(270deg, #e31937, #9f1126)
 }
 .main {

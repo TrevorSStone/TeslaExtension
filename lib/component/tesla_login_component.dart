@@ -30,7 +30,7 @@ class TeslaLoginComponent {
     _teslaService.postLogin(email, password).then((HttpResponse response) {
       _teslaService.isLoggedIn().then((bool loggedin) {
         if (loggedin) {
-          window.location.replace('main.html');
+          _teslaService.sendLoginMessage();
         } else {
           loginFailed = true;
         }

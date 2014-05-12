@@ -2,12 +2,15 @@ library tesla_main;
 import 'package:angular/angular.dart';
 import 'package:tesla_extension/service/tesla_service.dart';
 import 'package:tesla_extension/tesla.dart';
+import 'package:tesla_extension/tesla_login.dart';
+import 'package:tesla_extension/component/tesla_login_component.dart';
 import 'package:tesla_extension/routing/tesla_router.dart';
 import 'package:tesla_extension/component/tesla_nav_component.dart';
 import 'package:tesla_extension/component/tesla_car_component.dart';
 import 'package:tesla_extension/component/tesla_battery_component.dart';
 import 'package:tesla_extension/component/tesla_climate_component.dart';
 import 'package:tesla_extension/component/tesla_map_component.dart';
+// import 'package:tesla_extension/component/tesla_static_map_component.dart';
 import 'package:tesla_extension/component/tesla_charge_controls.dart';
 import 'package:tesla_extension/component/tesla_charge_rate.dart';
 import 'package:angular/application_factory.dart';
@@ -28,8 +31,18 @@ class TeslaModule extends Module {
   }
 }
 
+class LoginModule extends Module {
+  LoginModule() {
+    type(TeslaLoginController);
+    type(TeslaService);
+    type(TeslaLoginComponent);
+  }
+}
+
+
 main() {
   applicationFactory()
     .addModule(new TeslaModule())
+    .addModule(new LoginModule())
     .run();
 }

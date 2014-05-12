@@ -59,6 +59,15 @@ class TeslaService {
       true);
   Stream get driveUpdate => _driveUpdateController.stream;
   bool _driveUpdated = false;
+
+  StreamController _loginUpdateController = new StreamController.broadcast(sync:
+      true);
+  Stream get loginUpdate => _loginUpdateController.stream;
+
+    StreamController _logoutUpdateController = new StreamController.broadcast(sync:
+      true);
+  Stream get logoutUpdate => _logoutUpdateController.stream;
+
   TeslaService(Http this._http);
   Future login() {
     return _http.get(_loginUrl);
@@ -85,6 +94,14 @@ class TeslaService {
       'Content-Type': 'application/x-www-form-urlencoded'
     };
     return _http.post(_loginUrl, encoded, headers: headers);
+  }
+
+  void sendLoginMessage(){
+    _loginUpdateController.add(true);
+  }
+
+  void sendLogoutMessage(){
+    _loginUpdateController.add(true);
   }
 
   String encodeMap(Map data) {

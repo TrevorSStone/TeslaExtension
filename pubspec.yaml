@@ -12,10 +12,10 @@ transformers:
 - dart_to_js_script_rewriter
 - angular:
     html_files:
-    - web/login.html
     - web/main.html
     - web/view/charge.html
     - web/view/climate.html
     - web/view/controls.html
     - web/view/home.html
     - web/view/location.html
+    csp: true

@@ -13,5 +13,6 @@ build
 *.js_
 *.js.deps
 *.js.map
+*.zip
 images/com*
 gotools/images
