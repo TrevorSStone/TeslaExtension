@@ -1,13 +1,16 @@
+svg{
+  overflow: visible;
+}
 #garage {
 	width: 100%
 }
 #car {
-	width: 100%;
+	width: 103%;
 	height: 16em;
 	position: relative;
 	left: -1em;
 	top: 2.7em;
-	-webkit-filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.7))
+	-webkit-filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.5));
 }
 .arrow {
 	display: none

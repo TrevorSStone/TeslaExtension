@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" 
+  version="1.1" baseProfile="full" width="16" height="16" viewBox="0 0 128 128">
+
+  <rect x="16" y="16" 
+          width="96" height="96"
+          rx="25" ry="25"
+           style="fill: #E51837;"/>
+  <path d="
+    M 56.5 105
+    l 0 -60
+    l -25 0
+    l 0 -15
+    l 65 0
+    l 0 15
+    l -25 0
+    l 0 60
+    Z
+    " 
+    style="fill: white;stroke-width:3;stroke:black"
+    fill-rule="evenodd"/>
+</svg>

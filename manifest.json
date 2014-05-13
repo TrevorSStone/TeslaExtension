@@ -4,7 +4,7 @@
     "name": "Tesla Model S Control",
     "short_name": "Tesla Model S",
     "description": "Controls your Model S through the browser.",
-    "version": "1.1.4",
+    "version": "1.1.5",
      "author": "Trevor S Stone",
     "icons": {
         "16": "images/icon16.png",

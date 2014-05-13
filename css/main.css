@@ -1,4 +1,6 @@
-
+*{
+  overflow: visible;
+}
 @font-face {
   font-family: 'montserratbold';
   src: url(../css/montserrat-bold-webfont.svg#montserratbold) format("svg");
@@ -21,13 +23,11 @@ body {
   height: 600px;
   margin: 0;
   font-size: 16px;
-  overflow: hidden;
   font-family: 'montserratregular', Fallback, sans-serif
 }
 .full{
   height:600px;
   width:100%;
-  overflow: hidden;
 }
 #version {
   position: absolute;

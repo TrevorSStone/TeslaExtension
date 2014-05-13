@@ -10,7 +10,7 @@
 	position: relative;
 	left: -1em;
 	top: 2.2em;
-	-webkit-filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.7))
+	-webkit-filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.5));
 }
 #chargecable {
 	display: none
