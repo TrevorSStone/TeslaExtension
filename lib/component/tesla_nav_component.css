@@ -29,7 +29,7 @@
   background: url('../svg/navicons/nav_loc_on.svg') no-repeat
 }
 nav {
-  font-size: 12px;
+  font-size: .75em;
   position: absolute;
   bottom: 0;
   height: 8em;
@@ -72,6 +72,6 @@ a {
   position: absolute;
   bottom: 1.2em;
   background: #222;
-  border-radius: 1000px / 50px;
-  box-shadow: 0px 0px 50px #bbb
+  border-radius: 100em / 6em;
+  box-shadow: 0px 0px 2em #bbb
 }

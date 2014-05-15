@@ -7,10 +7,9 @@
 #car {
 	width: 100%;
 	height: 16em;
-	position: relative;
-	left: -1em;
-	top: 2.2em;
-	-webkit-filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.5));
+	position: absolute;
+	top: 15%;
+	-webkit-filter: drop-shadow(0 0 1.7em rgba(255, 255, 255, 0.5))
 }
 #chargecable {
 	display: none
@@ -58,7 +57,7 @@
 	display: inline
 }
 #car.sunroof.open .fsunroof, #car.sunroof.comfort .fsunroof {
-	transform: translate(-40px, 0);
+	transform: translate(-44px, 0);
 	-webkit-transform: translate(-44px, 0)
 }
 #car.sunroof.vent .fsunroof {

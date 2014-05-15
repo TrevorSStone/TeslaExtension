@@ -1,16 +1,16 @@
 .button {
-  border-top: 1px solid #858585;
+  border-top: .1em solid #858585;
   background: #333336;
   background: -webkit-gradient(linear, left top, left bottom, from(#5c5c5c), to(#333336));
   background: -webkit-linear-gradient(top, #5c5c5c, #333336);
   padding: 1em;
-  -webkit-border-radius: 7px;
-  border-radius: 7px;
-  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+  -webkit-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 .1em 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 .1em 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 .1em 0;
   color: white;
-  font-size: 15px;
+  font-size: 0.9375em;
   font-family: 'montserratbold', Fallback, sans-serif;
   text-decoration: none;
   vertical-align: middle;
@@ -34,16 +34,16 @@
 .button.disabled {
   background: #222222;
   cursor: default;
-  border-top: 1px solid #555;
+  border-top: .1em solid #555;
   color: #444
 }
 .button.disabled:hover {
   background: #222222;
-  border-top: 1px solid #555
+  border-top: .1em solid #555
 }
 .button.disabled:active {
   background: #222222;
-  border-top: 1px solid #555
+  border-top: .1em solid #555
 }
 li {
   margin: .5em
