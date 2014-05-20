@@ -15,9 +15,7 @@
 }
 html {
   width: 25em;
-  height: 37.4em
-}
-html {
+  height: 37.4em;
   position: relative;
   background: gray;
   font-size: 16px
@@ -35,6 +33,7 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  font-size: 100%;
   font-family: 'montserratregular', Fallback, sans-serif
 }
 .full {
@@ -192,7 +191,7 @@ header .button {
   float: right;
   font-size: .75em;
   line-height: 3rem;
-  width: 40%;
+  width: 45%;
   padding: 0;
   margin-top: 1em;
   margin-right: 1.5em

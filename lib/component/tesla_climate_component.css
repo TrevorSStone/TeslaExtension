@@ -10,6 +10,7 @@ svg{
 	height: 16em;
 	position: absolute;
 	top: 15%;
+	right:5%;
 	-webkit-filter: drop-shadow(0 0 1.7em rgba(255, 255, 255, 0.5));
 }
 .arrow {

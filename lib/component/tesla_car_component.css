@@ -9,6 +9,7 @@
 	height: 16em;
 	position: absolute;
 	top: 15%;
+	right:5%;
 	-webkit-filter: drop-shadow(0 0 1.7em rgba(255, 255, 255, 0.5))
 }
 #chargecable {
@@ -102,10 +103,10 @@
 #frunk.open {
 	color: white;
 	position: absolute;
-	right: -11px;
+	right: -6%;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
-	top: 40%;
+	top: 35%;
 	display: block
 }
 #trunk {
@@ -114,9 +115,9 @@
 #trunk.open {
 	color: white;
 	position: absolute;
-	left: 5px;
+	left: -6%;
 	-webkit-transform: rotate(-90deg);
 	transform: rotate(-90deg);
-	top: 40%;
+	top: 35%;
 	display: block
 }
